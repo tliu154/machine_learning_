@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+.vscode/
+
+# 数据与大文件（教程仓库只放代码和文档，数据按需下载）
+data/raw/
+data/processed/
+datasets/
+*.csv
+*.parquet
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.h5
+*.ckpt
+!docs/**/*.csv
+
+# 训练产物与日志
+runs/
+logs/
+checkpoints/
+wandb/
+mlruns/
+
+# matplotlib 缓存
+.fontlist-*.json
+
+# 系统
+Thumbs.db
+.DS_Store
