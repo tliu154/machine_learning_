@@ -7,6 +7,8 @@ ch08 练习：经典分类算法（Classical Classification Algorithms）
 把每个 TODO 补完，右键 Run；底部 assert 全过就过关。
 
 注意：本章练习只依赖 numpy，不需要 scikit-learn。
+本文件是【ML 第 8 章】的练习，与
+00_foundations/python_basics/exercises/ch08_ex.py（迭代器与生成器）不是同一份。
 """
 
 import numpy as np

@@ -7,6 +7,8 @@ ch07 练习：线性模型（Linear Models）
 把每个 TODO 补完，右键 Run；底部 assert 全过就过关。
 
 注意：本章练习只依赖 numpy，不需要 scikit-learn（7.4 的库代码仅作对照）。
+本文件是【ML 第 7 章】的练习，与
+00_foundations/python_basics/exercises/ch07_ex.py（函数）不是同一份。
 """
 
 import numpy as np
