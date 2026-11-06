@@ -105,9 +105,9 @@
 
 **节骨架：** 8.1 KNN ｜ 8.2 决策树 ｜ 8.3 SVM ｜ 8.4 朴素贝叶斯 ｜ 8.5 算法对比与适用场景
 
-### 第 9 章 集成方法（Ensemble Methods） · [待写]
+### 第 9 章 集成方法（Ensemble Methods） · [已完成]
 
-> `ch09_ensemble.md` ｜ `ch09_ex.py`
+> [教学](02_supervised/docs/ch09_ensemble.md) · [练习](02_supervised/exercises/ch09_ex.py)
 
 **本章子概念索引：** Bagging · 随机森林（Random Forest）· Boosting · 梯度提升（Gradient Boosting）· XGBoost / LightGBM · 堆叠（Stacking）
 
