@@ -20,11 +20,13 @@
 7 篇教学 + 6 份练习，参考答案全部跑过 `assert` 自测。
 这些文件沿用旧命名（`np01` 而非 `ch01`），是历史资产，不强行改号。
 
-## 待迁移：python_basics/
+## 已完成：python_basics/
 
 Python 基础语法 ch01~ch12（变量与引用、容器、函数、生成器、异常、类、模块、递归）
-因 `D:\develop` 目录重组已散落，尚未收录。找到后按 `docs/` + `exercises/` 放进来，
-在 [SYLLABUS](../SYLLABUS.md) 把 1.1 节改为 `[已完成]`。
+已于 2026-11 从 `D:\我的知识库\develop\Python\python_ex\` 迁入（原目录保留）：
+**13 篇教学 + 12 份练习**，参考答案全部通过自测。详见 [python_basics/README.md](python_basics/README.md)。
+
+> 注意该目录里的 `chNN` 是基础教程**自己的章号**，和本仓库 ML 章号无关（两个 `ch04_ex.py` 内容完全不同）。
 
 ## 本篇写作提醒
 
