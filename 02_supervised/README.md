@@ -4,9 +4,9 @@
 
 章节清单与状态看 [SYLLABUS 第 3 篇](../SYLLABUS.md)。
 
-> 注：`ch07` 已按「允许跳读」的约定先行完成。ch05 / ch06 待写期间，本章自带所需的
-> $R^2$ 与「先划分再标准化」最小实现，不依赖那两章；教学 7.4 需要
-> `pip install scikit-learn`，练习不需要。
+> 注：`ch07` / `ch08` 已按「允许跳读」的约定先行完成。ch05 / ch06 待写期间，两章自带所需的
+> $R^2$、「先划分再标准化」与 train/val 对比的最小实现，不依赖那两章；
+> 教学里的 sklearn 对照代码需要 `pip install scikit-learn`，**练习一律不需要**。
 
 ## 每章固定结构
 
@@ -30,6 +30,7 @@
 ## 练习设计方向
 
 - ch07：numpy 实现正规方程，和 `LinearRegression` 对参数
-- ch08：手写 Sigmoid + 交叉熵、不同 `max_depth` 下 train/val 曲线
+- ch08：numpy 手写 KNN 投票、基尼/熵与最佳切分、递归决策树；对比不同 `max_depth`
+  下的 train/val 曲线，以及缩放前后 KNN 准确率
 - ch09：手搓一次 Bagging 投票，对比单棵树方差
 - ch10：故意先缩放再划分，量化数据泄漏带来的虚高分数（和 ch06 呼应）

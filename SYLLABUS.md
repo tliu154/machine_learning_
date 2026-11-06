@@ -97,9 +97,9 @@
 
 **节骨架：** 7.1 线性回归 ｜ 7.2 逻辑回归 ｜ 7.3 正则化线性模型 ｜ 7.4 从 NumPy 实现到 scikit-learn
 
-### 第 8 章 经典分类算法（Classical Classification Algorithms） · [待写]
+### 第 8 章 经典分类算法（Classical Classification Algorithms） · [已完成]
 
-> `ch08_classical_classifiers.md` ｜ `ch08_ex.py`
+> [教学](02_supervised/docs/ch08_classical_classifiers.md) · [练习](02_supervised/exercises/ch08_ex.py)
 
 **本章子概念索引：** K 近邻（KNN）· 决策树（Decision Tree）· 信息增益（Information Gain）· 基尼不纯度（Gini Impurity）· 支持向量机（SVM）· 核方法（Kernel Method）· 朴素贝叶斯（Naive Bayes）
 

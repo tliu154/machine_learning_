@@ -19,6 +19,7 @@
 | [00_foundations/python_basics/](00_foundations/python_basics/README.md) | 已完成：Python 基础语法 13 篇教学 + 12 份练习 |
 | [01_ml_framework/docs/ch04_training_steps.md](01_ml_framework/docs/ch04_training_steps.md) | 已完成：ML 第 4 章 训练三步骤 |
 | [02_supervised/docs/ch07_linear_models.md](02_supervised/docs/ch07_linear_models.md) | 已完成：ML 第 7 章 线性模型 |
+| [02_supervised/docs/ch08_classical_classifiers.md](02_supervised/docs/ch08_classical_classifiers.md) | 已完成：ML 第 8 章 经典分类算法 |
 
 ## 本次框架调整：采纳什么、改什么
 
@@ -99,9 +100,10 @@ machine_learning/
   - 第 1 篇 1.3~1.5：三件套 7 篇教学 + 6 份练习 + 1 份速查表（[data_stack](00_foundations/data_stack/README.md)）
   - 第 4 章：训练三步骤 1 篇教学 + 1 份练习（[ch04](01_ml_framework/docs/ch04_training_steps.md)）
   - 第 7 章：线性模型 1 篇教学 + 1 份练习（[ch07](02_supervised/docs/ch07_linear_models.md)）
-  - 合计 **22 篇教学 + 20 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
+  - 第 8 章：经典分类算法 1 篇教学 + 1 份练习（[ch08](02_supervised/docs/ch08_classical_classifiers.md)）
+  - 合计 **23 篇教学 + 21 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
 - **已规划**：24 章 + 6 个附录，约 150 个概念小节，全部列在 [SYLLABUS.md](SYLLABUS.md)
-- **下一步**：ch03 / ch05 / ch06 补齐第 2 篇上下文，或 ch08 经典分类算法（承接 ch07「线性分不开」的失效场景）
+- **下一步**：ch09 集成方法（承接 ch08 单棵树方差大），或 ch03 / ch05 / ch06 补齐第 2 篇上下文
 
 ## 快速开始
 
