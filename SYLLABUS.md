@@ -89,9 +89,9 @@
 
 前置：第 2 篇。统一用 sklearn 演示，每章至少有一个练习只用 numpy 手写核心步骤。
 
-### 第 7 章 线性模型（Linear Models） · [待写]
+### 第 7 章 线性模型（Linear Models） · [已完成]
 
-> `ch07_linear_models.md` ｜ `ch07_ex.py`
+> [教学](02_supervised/docs/ch07_linear_models.md) · [练习](02_supervised/exercises/ch07_ex.py)
 
 **本章子概念索引：** 线性回归（Linear Regression）· 最小二乘（Least Squares）· 逻辑回归（Logistic Regression）· Sigmoid 函数 · 交叉熵损失（Cross-Entropy Loss）· 梯度下降（Gradient Descent）
 

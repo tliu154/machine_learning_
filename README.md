@@ -18,6 +18,7 @@
 | [00_foundations/data_stack/](00_foundations/data_stack/) | 已完成：numpy / pandas / matplotlib 7 篇教学 + 6 份练习 |
 | [00_foundations/python_basics/](00_foundations/python_basics/README.md) | 已完成：Python 基础语法 13 篇教学 + 12 份练习 |
 | [01_ml_framework/docs/ch04_training_steps.md](01_ml_framework/docs/ch04_training_steps.md) | 已完成：ML 第 4 章 训练三步骤 |
+| [02_supervised/docs/ch07_linear_models.md](02_supervised/docs/ch07_linear_models.md) | 已完成：ML 第 7 章 线性模型 |
 
 ## 本次框架调整：采纳什么、改什么
 
@@ -97,9 +98,10 @@ machine_learning/
   - 第 1 篇 1.1：Python 基础语法 13 篇教学 + 12 份练习（[python_basics](00_foundations/python_basics/README.md)）
   - 第 1 篇 1.3~1.5：三件套 7 篇教学 + 6 份练习 + 1 份速查表（[data_stack](00_foundations/data_stack/README.md)）
   - 第 4 章：训练三步骤 1 篇教学 + 1 份练习（[ch04](01_ml_framework/docs/ch04_training_steps.md)）
-  - 合计 **21 篇教学 + 19 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
+  - 第 7 章：线性模型 1 篇教学 + 1 份练习（[ch07](02_supervised/docs/ch07_linear_models.md)）
+  - 合计 **22 篇教学 + 20 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
 - **已规划**：24 章 + 6 个附录，约 150 个概念小节，全部列在 [SYLLABUS.md](SYLLABUS.md)
-- **下一步**：ch03 或 ch05（补齐第 2 篇上下文），或 ch07 线性模型（承接 ch04 的闭式解）
+- **下一步**：ch03 / ch05 / ch06 补齐第 2 篇上下文，或 ch08 经典分类算法（承接 ch07「线性分不开」的失效场景）
 
 ## 快速开始
 
@@ -111,7 +113,9 @@ python np01_ex.py       # 输出 "np01 全部通过 ✓" 即过关
 python tools/verify_all.py
 ```
 
-依赖：`pip install numpy pandas matplotlib`（后续章节按需加 `scikit-learn`、`torch`）。
+依赖：`pip install numpy pandas matplotlib scikit-learn`。
+`scikit-learn` 从 ch07 起只在**教学文档**里做库对照，**所有练习一律只用 numpy**；
+后续深度学习章节再按需加 `torch`。
 仓库不收录数据集和模型权重，练习数据全部现场生成或用临时目录。
 
 ## 添加一章的最短路径
