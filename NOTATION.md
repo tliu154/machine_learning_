@@ -18,7 +18,7 @@
 | $\lambda$ | 正则化强度 | `alpha`（跟随 sklearn）/ `l2` |
 | $\mathbb{E}[\cdot]$, $\mathrm{Var}$ | 期望 / 方差 | `np.mean` / `np.var` |
 | $\sigma(\cdot)$ | Sigmoid 函数 | `sigmoid(z)` |
-| $\\{(x_i, y_i)\\}_{i=1}^{n}$ | 数据集 | `X, y` |
+| $\lbrace (x_i, y_i) \rbrace_{i=1}^{n}$ | 数据集 | `X, y` |
 
 **形状约定**（最容易混的地方，每章代码里都要写清）：
 
