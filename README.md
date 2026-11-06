@@ -14,7 +14,10 @@
 | [CONTRIBUTING.md](CONTRIBUTING.md) | 新增章节的命名、锚点、模板、校验规范 |
 | [NOTATION.md](NOTATION.md) | 符号约定与术语规范（全仓库统一） |
 | [`_templates/`](_templates/) | 章节模板 / 单节模板 / 练习模板 |
+| [`tools/verify_all.py`](tools/verify_all.py) | 一键自检：练习参考答案 + 相对链接 + 显式锚点 |
 | [00_foundations/data_stack/](00_foundations/data_stack/) | 已完成：numpy / pandas / matplotlib 7 篇教学 + 6 份练习 |
+| [00_foundations/python_basics/](00_foundations/python_basics/README.md) | 已完成：Python 基础语法 13 篇教学 + 12 份练习 |
+| [01_ml_framework/docs/ch04_training_steps.md](01_ml_framework/docs/ch04_training_steps.md) | 已完成：ML 第 4 章 训练三步骤 |
 
 ## 本次框架调整：采纳什么、改什么
 
@@ -63,9 +66,10 @@ machine_learning/
 ├── CONTRIBUTING.md        写作与校验规范
 ├── NOTATION.md            符号与术语约定
 ├── _templates/            章节模板 / 单节模板 / 练习模板
+├── tools/                 verify_all.py：全仓库自检
 ├── 00_foundations/        第1篇 基础工具与数学直觉
 │   ├── data_stack/        [已完成] numpy/pandas/matplotlib 全套
-│   └── python_basics/     [待迁移] 原 ch01~ch12
+│   └── python_basics/     [已完成] 基础语法 ch01~ch12
 ├── 01_ml_framework/       第2篇 机器学习基础框架
 ├── 02_supervised/         第3篇 监督学习
 ├── 03_unsupervised/       第4篇 无监督学习
@@ -89,16 +93,22 @@ machine_learning/
 
 ## 进度
 
-- **已完成**：7 篇教学 + 6 份练习 + 1 份速查表（第 1 篇的 1.3 / 1.4 / 1.5 节）
+- **已完成**：
+  - 第 1 篇 1.1：Python 基础语法 13 篇教学 + 12 份练习（[python_basics](00_foundations/python_basics/README.md)）
+  - 第 1 篇 1.3~1.5：三件套 7 篇教学 + 6 份练习 + 1 份速查表（[data_stack](00_foundations/data_stack/README.md)）
+  - 第 4 章：训练三步骤 1 篇教学 + 1 份练习（[ch04](01_ml_framework/docs/ch04_training_steps.md)）
+  - 合计 **21 篇教学 + 19 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
 - **已规划**：24 章 + 6 个附录，约 150 个概念小节，全部列在 [SYLLABUS.md](SYLLABUS.md)
-- **待迁移**：Python 基础语法 ch01~ch12（原 `D:\develop\python` 已重组，文件散落）
-- **下一步**：挑一章开写，复制 `_templates/`，写完只更新 SYLLABUS 的状态
+- **下一步**：ch03 或 ch05（补齐第 2 篇上下文），或 ch07 线性模型（承接 ch04 的闭式解）
 
 ## 快速开始
 
 ```bash
 cd 00_foundations/data_stack/exercises
 python np01_ex.py       # 输出 "np01 全部通过 ✓" 即过关
+
+# 回到仓库根，一键自检全部练习 / 链接 / 锚点
+python tools/verify_all.py
 ```
 
 依赖：`pip install numpy pandas matplotlib`（后续章节按需加 `scikit-learn`、`torch`）。
@@ -110,6 +120,6 @@ python np01_ex.py       # 输出 "np01 全部通过 ✓" 即过关
 2. 复制 `_templates/chapter_template.md` 到对应篇的 `docs/chNN_*.md`
 3. 按 `_templates/concept_section.md` 逐节填写（每节显式锚点）
 4. 复制 `_templates/exercise_template.py` 到 `exercises/chNN_ex.py`
-5. 跑自测、更新 SYLLABUS 状态、commit
+5. 跑 `python tools/verify_all.py`、更新 SYLLABUS 状态、commit
 
 详细规则见 [CONTRIBUTING.md](CONTRIBUTING.md)。

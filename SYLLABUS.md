@@ -30,7 +30,7 @@
 
 | 节 | 概念 | 状态 | 现有内容 |
 |---|---|---|---|
-| 1.1 | Python 基础语法 | [待迁移] | 原 ch01~ch12，见 `python_basics/` |
+| 1.1 | Python 基础语法 | [已完成] | [python_basics/](00_foundations/python_basics/README.md) 13 篇教学 + 12 份练习 |
 | 1.2 | Jupyter / venv / uv / Git | [待写] | — |
 | 1.3 | NumPy 数值数组 | [已完成] | `data_stack/docs/np01~np03_*.md` + 3 份练习 |
 | 1.4 | pandas 表格处理 | [已完成] | `data_stack/docs/pd01~pd02_*.md` + 2 份练习 |
@@ -59,9 +59,9 @@
 
 **节骨架：** 3.1 定义 ｜ 3.2 学习范式 ｜ 3.3 任务类型 ｜ 3.4 传统编程 vs. 机器学习
 
-### 第 4 章 训练三步骤（Three Steps of Training） · [待写]
+### 第 4 章 训练三步骤（Three Steps of Training） · [已完成]
 
-> 文件：`ch04_training_steps.md` ｜ 练习：`ch04_ex.py`
+> [教学](01_ml_framework/docs/ch04_training_steps.md) · [练习](01_ml_framework/exercises/ch04_ex.py)
 
 **本章子概念索引：** 模型（Model）· 未知参数（Unknown Parameters）· 损失函数（Loss Function）· 优化（Optimization）· 梯度下降（Gradient Descent）· 学习率（Learning Rate）
 

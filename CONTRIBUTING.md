@@ -32,7 +32,7 @@
 ## 2. 写章节（`_templates/chapter_template.md`）
 
 > 模板里的 `chNN_ex.py` / `chNN-1_xxx.md` 是**占位链接**，复制后必须逐个替换；
-> 用链接检查脚本时应排除 `_templates/`，否则会报预期内的假警报。
+> `tools/verify_all.py` 会自动跳过 `_templates/`，不会因此报警。
 
 必须有的三样：
 
@@ -78,29 +78,21 @@ ID 格式 `c<章号>-<节号>`，分配后不改；删节保留占位并标「�
 
 ## 4. 校验（不能跳过）
 
-把答案区抽出来替换函数桩后**实际执行**自测体：
+在仓库根目录跑（任意目录下执行也行，脚本按自身位置推断仓库根）：
 
-```python
-import re, textwrap
-from pathlib import Path
-
-def extract(text):
-    region = re.search(r"# region 参考答案(.*?)# endregion", text, re.S).group(1)
-    answers = "\n".join(re.findall(r'"""(.*?)"""', region, re.S))
-    head = text.partition("# region 参考答案")[0]
-    marker = 'if __name__ == "__main__":'
-    idx = head.index(marker)
-    return head[:idx], answers, textwrap.dedent(head[idx + len(marker):])
-
-for f in Path(".").rglob("*_ex.py"):
-    prefix, answers, body = extract(f.read_text(encoding="utf-8"))
-    ns = {"__name__": "__main__", "__file__": str(f)}
-    exec(compile(prefix, f.name, "exec"), ns)
-    exec(compile(answers, f.name, "exec"), ns)   # 答案覆盖 TODO 桩
-    exec(compile(body, f.name, "exec"), ns)      # 跑 assert
+```bash
+python tools/verify_all.py
 ```
 
-要求：所有 assert 通过、无警告、不在仓库里留下图片/CSV 垃圾。
+任一检查失败，退出码为 1。脚本做三件事：
+
+| 检查项 | 做法 |
+|---|---|
+| 练习 | 抽出 `# region 参考答案` 里的三引号答案，覆盖同名 TODO 函数桩，再**实际执行**底部自测体的 `assert` |
+| 相对链接 | 检查所有 `.md` 的链接目标是否存在；自动剥离围栏代码块与行内代码（否则 C++ 的 `[](int x)` 会被误判成链接） |
+| 显式锚点 | 检查 `#cNN-MM` 链接在目标文件里确实存在 `<a id="cNN-MM"></a>`；GitHub 自动 slug 无法离线推断，跳过 |
+
+要求：`ALL PASS`、无警告、不在仓库里留下图片/CSV 垃圾。加一章后至少跑一次，别只靠肉眼。
 
 另外人工检查一次：
 
