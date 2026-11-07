@@ -279,5 +279,5 @@ XOR 型数据、强非线性交互、类别边界是曲线时，它连训练集�
 多项式特征、Sigmoid 与交叉熵、手写逻辑回归，到 Ridge 和防泄漏的划分标准化，共 11 题。
 **全部只用 numpy**，跑通所有 `assert` 即过关；7.4 的 sklearn 代码仅作对照，不进练习。
 
-上一篇：第 6 章 评估指标（待写，见 [SYLLABUS](../../SYLLABUS.md)）
-下一篇：第 8 章 经典分类算法（待写，见 [SYLLABUS](../../SYLLABUS.md)）
+上一篇：[第 6 章 评估指标](../../01_ml_framework/docs/ch06_evaluation_metrics.md)
+下一篇：[第 8 章 经典分类算法](ch08_classical_classifiers.md)

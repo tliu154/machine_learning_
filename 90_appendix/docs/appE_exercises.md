@@ -1,6 +1,6 @@
 # 附录 E 练习索引（Exercise Index）
 
-全仓库 **24 份**练习的总入口。**这里只放链接，不重复存答案** —— 参考答案统一留在各
+全仓库 **26 份**练习的总入口。**这里只放链接，不重复存答案** —— 参考答案统一留在各
 `chNN_ex.py` 末尾的 `# region 参考答案` / `# endregion` 之间（PyCharm 里可折叠），
 改答案只改那一处，不用同步两个地方。
 
@@ -47,7 +47,9 @@
 
 | 练习 | 章 | 主题 |
 |---|---|---|
+| [ch03_ex.py](../../01_ml_framework/exercises/ch03_ex.py) | 第 3 章 | 学阈值 vs 手写规则、漂移后重学、自监督伪标签、2-means、任务类型、自训练 |
 | [ch04_ex.py](../../01_ml_framework/exercises/ch04_ex.py) | 第 4 章 | 训练三步骤：前向、MSE、解析/数值梯度、训练循环、发散判定 |
+| [ch05_ex.py](../../01_ml_framework/exercises/ch05_ex.py) | 第 5 章 | 多项式与 Ridge、偏差—方差分解、阶数扫描、K 折 CV、外推灾难、误差诊断 |
 | [ch06_ex.py](../../01_ml_framework/exercises/ch06_ex.py) | 第 6 章 | 评估指标：混淆矩阵、P/R/F1、ROC-AUC、回归四指标、业务代价、泄漏量化 |
 
 ## 第 3 篇 监督学习（`02_supervised/`）

@@ -303,7 +303,9 @@ for model in (KNeighborsClassifier(n_neighbors=5),
 > 别一上来就上深度学习。**基线不是为了赢，是为了知道后面每一分提升值不值。**
 
 **常见误区**：**别拿训练集准确率选模型**。本章决策树深度 12 时 train 1.000、val 0.900，
-按 train 挑就会选到最过拟合的那个。划分验证集、只看 val，是 ch05 / ch06 的主题。
+按 train 挑就会选到最过拟合的那个。划分验证集、只看 val，见
+[ch05 误差来源](../../01_ml_framework/docs/ch05_error_sources.md) 与
+[ch06 评估指标](../../01_ml_framework/docs/ch06_evaluation_metrics.md)。
 
 **对应练习**：[第 7、8 题](../exercises/ch08_ex.py)（自测里用不同 `max_depth` 跑 train/val 曲线对比）
 
@@ -332,4 +334,4 @@ for model in (KNeighborsClassifier(n_neighbors=5),
 共 11 题。**全部只用 numpy**，跑通所有 `assert` 即过关。
 
 上一篇：[第 7 章 线性模型](ch07_linear_models.md)
-下一篇：第 9 章 集成方法（待写，见 [SYLLABUS](../../SYLLABUS.md)）
+下一篇：[第 9 章 集成方法](ch09_ensemble.md)

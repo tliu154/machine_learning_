@@ -218,7 +218,8 @@ for xb, yb in batch_iterator(x, y, 16, shuffle=True):
 划分数据 → 预处理 → 【模型 → 损失 → 优化】循环 → 验证评估 → 保存 → 推理
 ```
 
-**最小代码**（骨架，细节留给 ch05 / ch06 / ch20）：
+**最小代码**（骨架，细节见 [ch05 误差来源](ch05_error_sources.md) /
+[ch06 评估指标](ch06_evaluation_metrics.md) / ch20 项目流程）：
 
 ```python
 # 1. 划分（先划分，再 fit 预处理器！）
@@ -277,5 +278,5 @@ print("val MSE:", mse_loss(y_va, linear_predict(x_va_s, w, b)))
 本章练习统一在 [`ch04_ex.py`](../exercises/ch04_ex.py)：从模型前向、损失、解析梯度、
 梯度检验，到完整训练循环和发散判定，共 10 题。跑通所有 `assert` 即过关。
 
-上一篇：第 3 章 机器学习是什么（待写，见 [SYLLABUS](../../SYLLABUS.md)）
-下一篇：第 5 章 误差来源与模型选择（待写，见 [SYLLABUS](../../SYLLABUS.md)）
+上一篇：[第 3 章 机器学习是什么](ch03_what_is_ml.md)
+下一篇：[第 5 章 误差来源与模型选择](ch05_error_sources.md)

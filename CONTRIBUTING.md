@@ -110,6 +110,8 @@ python tools/verify_all.py
 ## 提交习惯
 
 - 一章一个 commit：`add ch07: 线性模型教学与练习`
+- **例外**：两章一起收口、共用 SYLLABUS / README 等状态文件时，合成一个 commit 并写清两章名。
+  别为了凑「一章一个」把同一文件的改动拆成两个中间不自洽的状态
 - 框架调整单独 commit，别和章节内容混
 - 不提交数据集、`*.pt`、`*.pkl`、`.venv`（见 `.gitignore`）
 - 推送前 `git status` 确认工作区干净

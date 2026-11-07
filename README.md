@@ -17,9 +17,11 @@
 | [`tools/verify_all.py`](tools/verify_all.py) | 一键自检：练习参考答案 + 相对链接 + 显式锚点 |
 | [00_foundations/data_stack/](00_foundations/data_stack/) | 已完成：numpy / pandas / matplotlib 7 篇教学 + 6 份练习 |
 | [00_foundations/python_basics/](00_foundations/python_basics/README.md) | 已完成：Python 基础语法 13 篇教学 + 12 份练习 |
+| [01_ml_framework/docs/ch03_what_is_ml.md](01_ml_framework/docs/ch03_what_is_ml.md) | 已完成：ML 第 3 章 机器学习是什么（第 2 篇收口） |
 | [01_ml_framework/docs/ch04_training_steps.md](01_ml_framework/docs/ch04_training_steps.md) | 已完成：ML 第 4 章 训练三步骤 |
+| [01_ml_framework/docs/ch05_error_sources.md](01_ml_framework/docs/ch05_error_sources.md) | 已完成：ML 第 5 章 误差来源与模型选择 |
 | [01_ml_framework/docs/ch06_evaluation_metrics.md](01_ml_framework/docs/ch06_evaluation_metrics.md) | 已完成：ML 第 6 章 评估指标 |
-| [90_appendix/docs/appE_exercises.md](90_appendix/docs/appE_exercises.md) | 已完成：附录 E 全部 24 份练习索引 |
+| [90_appendix/docs/appE_exercises.md](90_appendix/docs/appE_exercises.md) | 已完成：附录 E 全部 26 份练习索引 |
 | [02_supervised/docs/ch07_linear_models.md](02_supervised/docs/ch07_linear_models.md) | 已完成：ML 第 7 章 线性模型 |
 | [02_supervised/docs/ch08_classical_classifiers.md](02_supervised/docs/ch08_classical_classifiers.md) | 已完成：ML 第 8 章 经典分类算法 |
 | [02_supervised/docs/ch09_ensemble.md](02_supervised/docs/ch09_ensemble.md) | 已完成：ML 第 9 章 集成方法 |
@@ -103,17 +105,20 @@ machine_learning/
 - **已完成**：
   - 第 1 篇 1.1：Python 基础语法 13 篇教学 + 12 份练习（[python_basics](00_foundations/python_basics/README.md)）
   - 第 1 篇 1.3~1.5：三件套 7 篇教学 + 6 份练习 + 1 份速查表（[data_stack](00_foundations/data_stack/README.md)）
+  - 第 3 章：机器学习是什么 1 篇教学 + 1 份练习（[ch03](01_ml_framework/docs/ch03_what_is_ml.md)）
   - 第 4 章：训练三步骤 1 篇教学 + 1 份练习（[ch04](01_ml_framework/docs/ch04_training_steps.md)）
+  - 第 5 章：误差来源与模型选择 1 篇教学 + 1 份练习（[ch05](01_ml_framework/docs/ch05_error_sources.md)）—— **第 2 篇收口**
   - 第 6 章：评估指标 1 篇教学 + 1 份练习（[ch06](01_ml_framework/docs/ch06_evaluation_metrics.md)）
   - 第 7 章：线性模型 1 篇教学 + 1 份练习（[ch07](02_supervised/docs/ch07_linear_models.md)）
   - 第 8 章：经典分类算法 1 篇教学 + 1 份练习（[ch08](02_supervised/docs/ch08_classical_classifiers.md)）
   - 第 9 章：集成方法 1 篇教学 + 1 份练习（[ch09](02_supervised/docs/ch09_ensemble.md)）
   - 第 10 章：特征工程 1 篇教学 + 1 份练习（[ch10](02_supervised/docs/ch10_feature_engineering.md)）—— **第 3 篇收口**
-  - 附录 E：24 份练习总索引（[appE](90_appendix/docs/appE_exercises.md)，只放链接不存答案）
-  - 合计 **26 篇教学 + 24 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
+  - 附录 E：26 份练习总索引（[appE](90_appendix/docs/appE_exercises.md)，只放链接不存答案）
+  - 合计 **28 篇教学 + 26 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
 - **已规划**：24 章 + 6 个附录，约 150 个概念小节，全部列在 [SYLLABUS.md](SYLLABUS.md)
-- **下一步**：第 2 篇只差 ch03 / ch05 → 补齐后整篇收口；或按依赖顺序开 ch11 聚类
-  （第 4 篇开篇，前置「评估 ch06 + 缩放 ch10」均已齐）
+- **下一步**：第 2 篇（ch03~ch06）与第 3 篇（ch07~ch10）均已收口 → 按依赖顺序开
+  ch11 聚类（第 4 篇开篇，前置「误差诊断 ch05 + 评估 ch06 + 缩放 ch10」均已齐）；
+  或回头补第 1 篇的 ch02 数学基础
 
 ## 快速开始
 

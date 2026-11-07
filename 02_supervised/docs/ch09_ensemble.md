@@ -250,4 +250,4 @@ for model in (BaggingClassifier(DecisionTreeClassifier(), n_estimators=50, rando
 **全部只用 numpy**，跑通所有 `assert` 即过关。
 
 上一篇：[第 8 章 经典分类算法](ch08_classical_classifiers.md)
-下一篇：第 10 章 特征工程（待写，见 [SYLLABUS](../../SYLLABUS.md)）
+下一篇：[第 10 章 特征工程](ch10_feature_engineering.md)

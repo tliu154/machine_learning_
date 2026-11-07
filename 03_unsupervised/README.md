@@ -1,6 +1,8 @@
 # 第 4 篇 无监督学习（Unsupervised Learning）
 
-**章号 11~13** ｜ 前置：ch05（评估）、ch10（特征缩放）
+**章号 11~13** ｜ 前置：[ch05 误差诊断](../01_ml_framework/docs/ch05_error_sources.md)、
+[ch06 评估指标](../01_ml_framework/docs/ch06_evaluation_metrics.md)、
+[ch10 特征缩放](../02_supervised/docs/ch10_feature_engineering.md)
 
 章节清单与状态看 [SYLLABUS 第 4 篇](../SYLLABUS.md)。原框架把聚类和降维塞在「经典算法」末尾，
 这次按学习依赖独立成篇 —— 没有标签之后，「什么叫好」这件事本身要重新定义。

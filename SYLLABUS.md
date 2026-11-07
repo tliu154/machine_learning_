@@ -51,9 +51,9 @@
 
 前置：第 1 篇。**整个教程最重要的一篇**：算法会过时，判断力不会。
 
-### 第 3 章 机器学习是什么（What is Machine Learning） · [待写]
+### 第 3 章 机器学习是什么（What is Machine Learning） · [已完成]
 
-> 文件：`ch03_what_is_ml.md` ｜ 练习：`ch03_ex.py`
+> [教学](01_ml_framework/docs/ch03_what_is_ml.md) · [练习](01_ml_framework/exercises/ch03_ex.py)
 
 **本章子概念索引：** 监督学习（Supervised Learning）· 无监督学习（Unsupervised Learning）· 半监督（Semi-supervised）· 自监督（Self-supervised）· 强化学习（Reinforcement Learning）· 分类（Classification）· 回归（Regression）· 结构化学习（Structured Learning）
 
@@ -67,9 +67,9 @@
 
 **节骨架：** 4.1 设定模型 ｜ 4.2 定义损失 ｜ 4.3 优化参数 ｜ 4.4 训练循环 ｜ 4.5 从三步骤到完整流程
 
-### 第 5 章 误差来源与模型选择（Error Sources and Model Selection） · [待写]
+### 第 5 章 误差来源与模型选择（Error Sources and Model Selection） · [已完成]
 
-> 文件：`ch05_error_sources.md` ｜ 练习：`ch05_ex.py`
+> [教学](01_ml_framework/docs/ch05_error_sources.md) · [练习](01_ml_framework/exercises/ch05_ex.py)
 
 **本章子概念索引：** 偏差（Bias）· 方差（Variance）· 偏差—方差权衡（Bias-Variance Tradeoff）· 过拟合（Overfitting）· 欠拟合（Underfitting）· 模型容量（Model Capacity）· 正则化（Regularization）· 训练/验证/测试集（Train/Val/Test Split）· 交叉验证（Cross-Validation）· 分布不匹配（Distribution Shift）
 
