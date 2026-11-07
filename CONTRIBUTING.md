@@ -113,3 +113,37 @@ python tools/verify_all.py
 - 框架调整单独 commit，别和章节内容混
 - 不提交数据集、`*.pt`、`*.pkl`、`.venv`（见 `.gitignore`）
 - 推送前 `git status` 确认工作区干净
+
+## 6. 写章前：先实测，别编数字
+
+教学文档里出现的**每一个数字**都必须来自实跑。流程：
+
+1. 在 workspace（**不要放仓库内**）写临时探针脚本，用隔离 venv 跑出全部对比数字，用完删掉。
+   环境：`C:/Users/36961/.workbuddy/binaries/python/envs/default/Scripts/python.exe`
+2. 效果不明显时**调场景，不调结论**：样本量、维度、噪声、类别比例都可以调，但只报告真实跑出的值。
+   测不出差异就如实写「看不出差别 ≠ 做法正确」—— ch10 的缩放泄漏 +0.000、
+   ch08 在 XOR 上信息增益为 0，都是这么处理的，不为了表格好看伪造虚高。
+3. 教学里的 sklearn 对照代码也要实测一致；**练习一律不 import sklearn**。
+4. 交付收尾清单：`SYLLABUS` 状态 → 根 README 进度汇总 → 篇 README 跳读注 / 练习方向 →
+   `tools/verify_all.py` → 一章一个 commit → push → 项目日志。
+5. 章号撞名：`python_basics/exercises/chNN_ex.py` 是基础教程自己的章号，与 ML 全局章号无关。
+   新练习的 docstring 必须写一句区分说明（ch04 / ch06 / ch07~ch10 全撞）。
+
+## 7. 推送后 `[gone]` 的处理
+
+沙箱里 push 成功、但 `git status -sb` 显示 `## main...origin/main [gone]`，
+是远程跟踪引用没落盘，**不是推送失败**：
+
+```bash
+mkdir -p .git/refs/remotes/origin
+git rev-parse HEAD > .git/refs/remotes/origin/main
+```
+
+推送命令（本机 `gh` 不可用、全局凭据助手为 `<no helper>`）：
+
+```bash
+GIT_TERMINAL_PROMPT=1 git -c credential.helper=manager \
+  -c credential.helperselector.selected=manager push origin main
+```
+
+中文路径：Git Bash 下 `git -C "/d/我的知识库/..."` 会失败，改用 `cd "..." && git ...`。
