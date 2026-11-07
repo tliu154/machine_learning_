@@ -113,9 +113,9 @@
 
 **节骨架：** 9.1 Bagging 与随机森林 ｜ 9.2 Boosting 与梯度提升 ｜ 9.3 偏差—方差视角
 
-### 第 10 章 特征工程（Feature Engineering） · [待写]
+### 第 10 章 特征工程（Feature Engineering） · [已完成]
 
-> `ch10_feature_engineering.md` ｜ `ch10_ex.py`
+> [教学](02_supervised/docs/ch10_feature_engineering.md) · [练习](02_supervised/exercises/ch10_ex.py)
 
 **本章子概念索引：** 特征缩放（Feature Scaling）· 归一化 / 标准化（Normalization / Standardization）· 缺失值处理（Missing Values）· 类别编码（Categorical Encoding）· 特征选择（Feature Selection）· 特征构造（Feature Construction）· 数据增强（Data Augmentation）
 

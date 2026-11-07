@@ -21,6 +21,7 @@
 | [02_supervised/docs/ch07_linear_models.md](02_supervised/docs/ch07_linear_models.md) | 已完成：ML 第 7 章 线性模型 |
 | [02_supervised/docs/ch08_classical_classifiers.md](02_supervised/docs/ch08_classical_classifiers.md) | 已完成：ML 第 8 章 经典分类算法 |
 | [02_supervised/docs/ch09_ensemble.md](02_supervised/docs/ch09_ensemble.md) | 已完成：ML 第 9 章 集成方法 |
+| [02_supervised/docs/ch10_feature_engineering.md](02_supervised/docs/ch10_feature_engineering.md) | 已完成：ML 第 10 章 特征工程（第 3 篇收口） |
 
 ## 本次框架调整：采纳什么、改什么
 
@@ -103,9 +104,10 @@ machine_learning/
   - 第 7 章：线性模型 1 篇教学 + 1 份练习（[ch07](02_supervised/docs/ch07_linear_models.md)）
   - 第 8 章：经典分类算法 1 篇教学 + 1 份练习（[ch08](02_supervised/docs/ch08_classical_classifiers.md)）
   - 第 9 章：集成方法 1 篇教学 + 1 份练习（[ch09](02_supervised/docs/ch09_ensemble.md)）
-  - 合计 **24 篇教学 + 22 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
+  - 第 10 章：特征工程 1 篇教学 + 1 份练习（[ch10](02_supervised/docs/ch10_feature_engineering.md)）—— **第 3 篇收口**
+  - 合计 **25 篇教学 + 23 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
 - **已规划**：24 章 + 6 个附录，约 150 个概念小节，全部列在 [SYLLABUS.md](SYLLABUS.md)
-- **下一步**：ch10 特征工程（和 ch06 数据泄漏呼应），或 ch03 / ch05 / ch06 补齐第 2 篇上下文
+- **下一步**：第 3 篇已收口 → ch11 聚类（第 4 篇开篇，前置 ch06 评估仍待补），或回头补齐 ch03 / ch05 / ch06 第 2 篇上下文
 
 ## 快速开始
 
