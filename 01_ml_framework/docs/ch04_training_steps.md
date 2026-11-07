@@ -239,7 +239,8 @@ print("val MSE:", mse_loss(y_va, linear_predict(x_va_s, w, b)))
 **常见误区**：**数据泄漏（Data Leakage）** —— 先在全量数据上算 `mu/sigma` 再划分，
 测试集的信息就悄悄进了训练过程，验证分数会虚高。
 **凡是「从数据里学出来的量」（均值、方差、编码器、特征选择器），都只能在训练集上 fit**。
-这是初学者最常犯、也最难自己发现的错，ch06 还会专门量化它。
+这是初学者最常犯、也最难自己发现的错，[ch06](ch06_evaluation_metrics.md) 从评估协议角度、
+[ch10](../../02_supervised/docs/ch10_feature_engineering.md) 从预处理 `fit` 边界角度分别量化了它。
 
 **对应练习**：[第 8 题（标准化，注意全相等时的除零）](../exercises/ch04_ex.py)
 

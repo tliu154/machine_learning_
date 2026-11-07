@@ -76,5 +76,7 @@ $$L(\theta) = \frac{1}{n}\sum_{i=1}^{n}\left(y_i - \hat{y}_i\right)^2$$
 
 - 中文叙述，代码/术语保留英文
 - **不重复讲编程基础**，只讲与 C++ / 已有认知的差异
-- 一章 150~250 行；一节五段模板见 [`_templates/concept_section.md`](_templates/concept_section.md)
+- 一章 **250~330 行**（已写 6 章实测 253~335 行）：子概念索引 + 若干五段节 + 实测表 + 小结表，
+  压不到 150 行；超过 350 行应拆节或拆章，**别硬删「常见误区」和「什么时候会翻车」**。
+  一节五段模板见 [`_templates/concept_section.md`](_templates/concept_section.md)
 - 章节状态只在 [SYLLABUS.md](SYLLABUS.md) 维护

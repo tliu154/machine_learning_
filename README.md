@@ -18,6 +18,8 @@
 | [00_foundations/data_stack/](00_foundations/data_stack/) | 已完成：numpy / pandas / matplotlib 7 篇教学 + 6 份练习 |
 | [00_foundations/python_basics/](00_foundations/python_basics/README.md) | 已完成：Python 基础语法 13 篇教学 + 12 份练习 |
 | [01_ml_framework/docs/ch04_training_steps.md](01_ml_framework/docs/ch04_training_steps.md) | 已完成：ML 第 4 章 训练三步骤 |
+| [01_ml_framework/docs/ch06_evaluation_metrics.md](01_ml_framework/docs/ch06_evaluation_metrics.md) | 已完成：ML 第 6 章 评估指标 |
+| [90_appendix/docs/appE_exercises.md](90_appendix/docs/appE_exercises.md) | 已完成：附录 E 全部 24 份练习索引 |
 | [02_supervised/docs/ch07_linear_models.md](02_supervised/docs/ch07_linear_models.md) | 已完成：ML 第 7 章 线性模型 |
 | [02_supervised/docs/ch08_classical_classifiers.md](02_supervised/docs/ch08_classical_classifiers.md) | 已完成：ML 第 8 章 经典分类算法 |
 | [02_supervised/docs/ch09_ensemble.md](02_supervised/docs/ch09_ensemble.md) | 已完成：ML 第 9 章 集成方法 |
@@ -40,8 +42,9 @@
 | 第 15 / 16 章 | **保留编号，允许合并** | 激活函数/初始化与训练技巧内容重叠，实际撰写时可合成一章，章号不删以便对照 |
 | 原模块前缀命名（np/pd/alg/dl…） | **改为全局章号** | `ch07_linear_models.md` 比 `alg01_xxx.md` 更直观，且章跨篇移动时不用改名 |
 
-**原风格保留不变**：C++ 迁移导向（只讲差异）、一章 150~250 行、教学配练习、
-`assert` 自测、`# region` 折叠答案、固定随机种子、不依赖大文件。
+**原风格保留不变**：C++ 迁移导向（只讲差异）、一章 250~330 行（实测表 + 五段模板的真实体量，
+见 [NOTATION.md](NOTATION.md)）、教学配练习、`assert` 自测、`# region` 折叠答案、
+固定随机种子、不依赖大文件。
 
 ## 学习依赖顺序
 
@@ -101,13 +104,16 @@ machine_learning/
   - 第 1 篇 1.1：Python 基础语法 13 篇教学 + 12 份练习（[python_basics](00_foundations/python_basics/README.md)）
   - 第 1 篇 1.3~1.5：三件套 7 篇教学 + 6 份练习 + 1 份速查表（[data_stack](00_foundations/data_stack/README.md)）
   - 第 4 章：训练三步骤 1 篇教学 + 1 份练习（[ch04](01_ml_framework/docs/ch04_training_steps.md)）
+  - 第 6 章：评估指标 1 篇教学 + 1 份练习（[ch06](01_ml_framework/docs/ch06_evaluation_metrics.md)）
   - 第 7 章：线性模型 1 篇教学 + 1 份练习（[ch07](02_supervised/docs/ch07_linear_models.md)）
   - 第 8 章：经典分类算法 1 篇教学 + 1 份练习（[ch08](02_supervised/docs/ch08_classical_classifiers.md)）
   - 第 9 章：集成方法 1 篇教学 + 1 份练习（[ch09](02_supervised/docs/ch09_ensemble.md)）
   - 第 10 章：特征工程 1 篇教学 + 1 份练习（[ch10](02_supervised/docs/ch10_feature_engineering.md)）—— **第 3 篇收口**
-  - 合计 **25 篇教学 + 23 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
+  - 附录 E：24 份练习总索引（[appE](90_appendix/docs/appE_exercises.md)，只放链接不存答案）
+  - 合计 **26 篇教学 + 24 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
 - **已规划**：24 章 + 6 个附录，约 150 个概念小节，全部列在 [SYLLABUS.md](SYLLABUS.md)
-- **下一步**：第 3 篇已收口 → ch11 聚类（第 4 篇开篇，前置 ch06 评估仍待补），或回头补齐 ch03 / ch05 / ch06 第 2 篇上下文
+- **下一步**：第 2 篇只差 ch03 / ch05 → 补齐后整篇收口；或按依赖顺序开 ch11 聚类
+  （第 4 篇开篇，前置「评估 ch06 + 缩放 ch10」均已齐）
 
 ## 快速开始
 

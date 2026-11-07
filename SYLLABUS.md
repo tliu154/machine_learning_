@@ -75,9 +75,9 @@
 
 **节骨架：** 5.1 偏差与方差 ｜ 5.2 权衡 ｜ 5.3 过拟合与欠拟合 ｜ 5.4 正则化 ｜ 5.5 数据划分与交叉验证 ｜ 5.6 分布不匹配 ｜ 5.7 误差诊断流程
 
-### 第 6 章 评估指标（Evaluation Metrics） · [待写]
+### 第 6 章 评估指标（Evaluation Metrics） · [已完成]
 
-> 文件：`ch06_evaluation_metrics.md` ｜ 练习：`ch06_ex.py`
+> [教学](01_ml_framework/docs/ch06_evaluation_metrics.md) · [练习](01_ml_framework/exercises/ch06_ex.py)
 
 **本章子概念索引：** 准确率（Accuracy）· 精确率（Precision）· 召回率（Recall）· F1 分数（F1 Score）· 混淆矩阵（Confusion Matrix）· ROC / AUC · MAE / MSE / RMSE · R² · 数据泄漏（Data Leakage）
 
@@ -277,7 +277,7 @@
 | B | 公式速查（Formula Sheet）每式配一段 numpy 实现 | [待写] |
 | C | 代码模板（Code Templates）训练循环 / 评估 / 画图 | [待写] |
 | D | 常用数据集（Datasets）下载方式、许可、大小 | [待写] |
-| E | 练习索引（Exercise Index）**只做索引，不重复存答案** | [待写] |
+| E | 练习索引（Exercise Index）**只做索引，不重复存答案** | [已完成] `90_appendix/docs/appE_exercises.md` |
 | F | 推荐资源（Resources） | [待写] |
 | — | numpy / pandas / matplotlib 速查表 | [已完成] `00_foundations/data_stack/docs/appendix_cheatsheet.md` |
 

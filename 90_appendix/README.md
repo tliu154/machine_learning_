@@ -10,7 +10,7 @@
 | B 公式速查（Formula Sheet） | `docs/appB_formulas.md` | [待写] |
 | C 代码模板（Code Templates） | `docs/appC_templates.md` | [待写] |
 | D 常用数据集（Datasets） | `docs/appD_datasets.md` | [待写] |
-| E 练习索引（Exercise Index） | `docs/appE_exercises.md` | [待写] |
+| E 练习索引（Exercise Index） | [docs/appE_exercises.md](docs/appE_exercises.md) | [已完成] |
 | F 推荐资源（Resources） | `docs/appF_resources.md` | [待写] |
 | 三件套速查表 | [00_foundations/data_stack/docs/appendix_cheatsheet.md](../00_foundations/data_stack/docs/appendix_cheatsheet.md) | [已完成] |
 
