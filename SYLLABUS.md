@@ -242,10 +242,13 @@
 |---|---|---|
 | 表格数据端到端 | 第 3~10 章 | `06_engineering/projects/tabular/` |
 | 图像分类（迁移学习） | 第 14~17 章 | `06_engineering/projects/image_classification/` |
-| **RoboMaster 装甲板识别** | 第 17 / 21 章 + OpenCV | `06_engineering/projects/armor_detection/` |
+| **以图搜图 / 图像检索（终点目标）** | 第 11~12 / 14~19 / 21 章 | `06_engineering/projects/image_retrieval/` |
 | 模型服务化 Demo | 第 21 章 | `06_engineering/projects/serving_demo/` |
 
-> 终点目标仍是装甲板识别：采集/标注 → YOLO 训练 → mAP/速度评估 → ONNX → C++ / OpenVINO 推理。
+> 终点目标为**以图搜图（Image Retrieval）**：图像集 → 预训练模型抽 embedding
+> → 降维 / 聚类（ch11、ch12）→ 建向量索引 → 查询服务与召回率 / 延迟评估
+> → 新图加入后的漂移监控（ch21）。无需标注、无需 GPU，
+> 与 `image_classification/` 共用同一份图像集和骨干模型。
 > `.gitignore` 已排除数据集与权重，仓库不放大文件。
 
 ---

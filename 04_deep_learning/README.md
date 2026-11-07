@@ -14,7 +14,8 @@ ch17 讲结构。**不把框架当黑箱**是这篇的底线。
 - Tensor ≈ 带 autograd 的 ndarray，但形状约定是 `[N, C, H, W]`
   （numpy 图像是 `[H, W, C]`，BGR；这里是 RGB + float32，**下标和通道顺序都反了**）
 - 图像预处理（resize、归一化、颜色转换）你已经会，重点讲框架为什么这么规定
-- 部署阶段回到 C++ / OpenVINO，是已有优势能直接迁移的地方
+- 部署主链路是 Python 服务（见 [第 7 篇实践轨道](../06_engineering/README.md)）；
+  C++ / OpenCV 经验仍可用在批量图像预处理与 embedding 抽取的加速上
 
 ## 练习设计方向
 
