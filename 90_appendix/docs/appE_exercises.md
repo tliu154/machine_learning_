@@ -1,6 +1,6 @@
 # 附录 E 练习索引（Exercise Index）
 
-全仓库 **31 份**练习的总入口。**这里只放链接，不重复存答案** —— 参考答案统一留在各
+全仓库 **32 份**练习的总入口。**这里只放链接，不重复存答案** —— 参考答案统一留在各
 `chNN_ex.py` 末尾的 `# region 参考答案` / `# endregion` 之间（PyCharm 里可折叠），
 改答案只改那一处，不用同步两个地方。
 
@@ -80,6 +80,7 @@
 |---|---|---|
 | [ch14_ex.py](../../04_deep_learning/exercises/ch14_ex.py) | 第 14 章 | 神经网络基础：数值稳定激活与导数、参数初始化、前向缓存、BCE、手写反向传播、全参数数值梯度检验、XOR 收敛、两层线性退化 |
 | [ch15_ex.py](../../04_deep_learning/exercises/ch15_ex.py) | 第 15 章 | 激活函数与初始化：Sigmoid 导数上界与饱和、Leaky ReLU / GELU、8 层前向 std 与逐层梯度范数、梯度消失 / 爆炸量化、死 ReLU、Xavier / He、复现 ch14 卡住的 `seed=0` |
+| [ch16_ex.py](../../04_deep_learning/exercises/ch16_ex.py) | 第 16 章 | 训练深度网络：SGD / Momentum / Adam 更新式与偏差修正、cosine / step 调度、BatchNorm / LayerNorm、running stats、inverted dropout、残差恒等支路、用几何平均判断逐层放大 |
 
 ---
 

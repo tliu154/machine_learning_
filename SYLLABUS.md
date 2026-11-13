@@ -201,13 +201,23 @@
 > **如实记录的负面结果**：ch14 `h=3` 的 XOR 换 5 种初始化，20 种子成功率仍只有 `0.40~0.60`；
 > 加到 `h=4` 就有 `0.90` —— 瓶颈是容量 / 局部最优而非梯度消失，系统解法留给 ch16。
 
-### 第 16 章 训练深度网络（Training Deep Networks） · [待写]
+### 第 16 章 训练深度网络（Training Deep Networks） · [已完成]
 
-> `ch16_training_dnn.md` ｜ `ch16_ex.py`
+> [教学](04_deep_learning/docs/ch16_training_dnn.md) · [练习](04_deep_learning/exercises/ch16_ex.py)
 
-**本章子概念索引：** 优化器（Optimizer）· SGD / Momentum / Adam · 学习率调度（LR Scheduling）· 批归一化 / 层归一化（Batch / Layer Norm）· Dropout · 残差连接（Residual Connection）· 早停（Early Stopping）
+**本章子概念索引：** 优化器（Optimizer）· SGD · Momentum · Adam · 一阶矩 / 二阶矩 · 偏差修正（Bias Correction）· 条件数（Condition Number）· 学习率调度（LR Scheduling）· Step Decay · Cosine Annealing · Warmup · 噪声地板（Noise Floor）· 批归一化 / 层归一化（Batch / Layer Norm）· running stats · train / eval 模式 · Dropout · inverted scaling · 残差连接（Residual Connection）· 恒等映射（Identity Mapping）· 深度退化（Degradation）· 稳定学习率区间 · `train_one_epoch`
 
-**节骨架：** 16.1 优化器 ｜ 16.2 学习率调度 ｜ 16.3 归一化 ｜ 16.4 Dropout 与残差 ｜ 16.5 深层网络退化
+**节骨架：** 16.1 优化器 ｜ 16.2 学习率调度 ｜ 16.3 归一化 ｜ 16.4 Dropout 与残差 ｜ 16.5 深度的代价与退化 ｜ 16.6 从 numpy 到 PyTorch
+
+> **结构备注**：本章**新增 16.6「从 numpy 到 PyTorch」**（原骨架 5 节），因为第 5 篇的底线是
+> 「先看透再上框架」，得有一节把 ch14~ch16 的手写件映射到 `nn.Module` / `autograd` / `optim`。
+> **练习题一律不依赖 torch**；16.6 的代码需 `pip install torch`（CPU 版即可），已在隔离环境实跑。
+> 病态二次型（条件数 100）实测：SGD `362` 步、Momentum `299` 步、Adam `82` 步达标；
+> SGD `lr=0.02` 踩稳定上限直接不收敛。带噪声梯度的调度对比：constant `0.02705` → cosine `0.00012`。
+> `std=1.0` 的 8 层网：无 BN 激活 std `3.29 → 2.03e+04`（每层约 ×4.3），有 BN `0.586 → 0.635`。
+> **如实记录的负面结果**：① 深度在同装置上没有换来收益（2 层 test MSE `0.00199` vs 32 层 `0.00336`）；
+> ② 无缩放残差 32 层激活 std 涨 `415` 倍、梯度涨 `122` 倍，**残差必须配归一化**；
+> ③ 2 层网络加 BN 是负收益（`2.45e-03` → `1.14e-02`）；④ `h=3` 换 Adam 仍 `0/20`，**只能加宽**。
 
 ### 第 17 章 常见网络结构（Common Architectures） · [待写]
 

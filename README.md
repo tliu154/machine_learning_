@@ -22,7 +22,7 @@
 | [01_ml_framework/docs/ch04_training_steps.md](01_ml_framework/docs/ch04_training_steps.md) | 已完成：ML 第 4 章 训练三步骤 |
 | [01_ml_framework/docs/ch05_error_sources.md](01_ml_framework/docs/ch05_error_sources.md) | 已完成：ML 第 5 章 误差来源与模型选择 |
 | [01_ml_framework/docs/ch06_evaluation_metrics.md](01_ml_framework/docs/ch06_evaluation_metrics.md) | 已完成：ML 第 6 章 评估指标 |
-| [90_appendix/docs/appE_exercises.md](90_appendix/docs/appE_exercises.md) | 已完成：附录 E 全部 31 份练习索引 |
+| [90_appendix/docs/appE_exercises.md](90_appendix/docs/appE_exercises.md) | 已完成：附录 E 全部 32 份练习索引 |
 | [02_supervised/docs/ch07_linear_models.md](02_supervised/docs/ch07_linear_models.md) | 已完成：ML 第 7 章 线性模型 |
 | [02_supervised/docs/ch08_classical_classifiers.md](02_supervised/docs/ch08_classical_classifiers.md) | 已完成：ML 第 8 章 经典分类算法 |
 | [02_supervised/docs/ch09_ensemble.md](02_supervised/docs/ch09_ensemble.md) | 已完成：ML 第 9 章 集成方法 |
@@ -31,6 +31,7 @@
 | [03_unsupervised/docs/ch12_dimensionality.md](03_unsupervised/docs/ch12_dimensionality.md) | 已完成：ML 第 12 章 降维与表示（含以图搜图的召回率 / 计算量权衡） |
 | [04_deep_learning/docs/ch14_nn_basics.md](04_deep_learning/docs/ch14_nn_basics.md) | 已完成：ML 第 14 章 神经网络基础（全 numpy 手写反向传播，第 5 篇开篇） |
 | [04_deep_learning/docs/ch15_activation_init.md](04_deep_learning/docs/ch15_activation_init.md) | 已完成：ML 第 15 章 激活函数与初始化（8 层梯度消失 / 爆炸实测，Xavier / He） |
+| [04_deep_learning/docs/ch16_training_dnn.md](04_deep_learning/docs/ch16_training_dnn.md) | 已完成：ML 第 16 章 训练深度网络（优化器 / 调度 / 归一化 / 残差 / PyTorch 入口） |
 
 ## 本次框架调整：采纳什么、改什么
 
@@ -126,11 +127,12 @@ machine_learning/
   - 第 12 章：降维与表示 1 篇教学 + 1 份练习（[ch12](03_unsupervised/docs/ch12_dimensionality.md)）
   - 第 14 章：神经网络基础 1 篇教学 + 1 份练习（[ch14](04_deep_learning/docs/ch14_nn_basics.md)）—— **第 5 篇开篇**（ch13 `[选读]` 跳过）
   - 第 15 章：激活函数与初始化 1 篇教学 + 1 份练习（[ch15](04_deep_learning/docs/ch15_activation_init.md)）—— 8 层梯度消失 / 爆炸量化，了结 ch14 的 `h=3` 悬念
-  - 附录 E：31 份练习总索引（[appE](90_appendix/docs/appE_exercises.md)，只放链接不存答案）
-  - 合计 **33 篇教学 + 31 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
+  - 第 16 章：训练深度网络 1 篇教学 + 1 份练习（[ch16](04_deep_learning/docs/ch16_training_dnn.md)）—— 优化器 / 调度 / 归一化 / 残差，末节接 PyTorch
+  - 附录 E：32 份练习总索引（[appE](90_appendix/docs/appE_exercises.md)，只放链接不存答案）
+  - 合计 **34 篇教学 + 32 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
 - **已规划**：24 章 + 6 个附录，约 150 个概念小节，全部列在 [SYLLABUS.md](SYLLABUS.md)
-- **下一步**：第 1~4 篇均已收口 / 按需跳过，第 5 篇 ch14 / ch15 已完成 →
-  接 ch16 训练深度网络（优化器、归一化、残差，**从这里起引入 PyTorch**）；
+- **下一步**：第 1~4 篇均已收口 / 按需跳过，第 5 篇 ch14 / ch15 / ch16 已完成 →
+  接 ch17 常见网络结构（CNN / RNN / Transformer，直接给第 6 篇 LLM 铺路）；
   或回头补第 1 篇剩下的 1.2 环境配置 / 1.6 最小实践
 
 ## 快速开始

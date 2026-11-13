@@ -11,7 +11,7 @@
 再用**反向传播**把误差从输出一路乘回每个参数。
 本章**全部用 numpy 手写，不引入任何框架**（[第 5 篇的底线](../README.md)）——
 先看清里面在算什么，[ch15](ch15_activation_init.md) 再往深里堆，
-[ch16](../../SYLLABUS.md) 起换 PyTorch 才不是拿框架当黑箱。
+[ch16](ch16_training_dnn.md) 起换 PyTorch 才不是拿框架当黑箱。
 
 > 数学基础薄弱也不用怕：本章严格守 [ch02 2.8 的「够用边界」](../../00_foundations/docs/ch02_math_foundations.md#c02-08)：
 > **会「拆中间量 → 逐段求导 → 相乘」就够，不写 Jacobian、不写矩阵微分推导**。
@@ -346,7 +346,7 @@ def train_network(X, y, h=4, lr=0.5, steps=10000, seed=0, scale=0.5):
 **常见误区**：
 
 - **全批量梯度下降撑不住大数据**：这里 120 个样本一把梭没问题，
-  真实图像数据要小批量 + 动量 / Adam，那是 [ch16](../../SYLLABUS.md)。
+  真实图像数据要小批量 + 动量 / Adam，那是 [ch16](ch16_training_dnn.md)。
 - **别把这套手写网络直接搬去跑图像**：全连接层把 $224\times224\times3$ 拍平会炸参数量，
   图像要 [ch17 的 CNN](../../SYLLABUS.md)。
   [以图搜图终点](../../06_engineering/README.md) 用的是预训练模型抽 embedding，不是从零训这个。
@@ -381,7 +381,7 @@ def train_network(X, y, h=4, lr=0.5, steps=10000, seed=0, scale=0.5):
 
 **和实践终点的联系**：以图搜图要「预训练模型抽 embedding」，
 本章就是理解那个模型内部在算什么的地基。真做项目时不会手写这些 ——
-[ch16](../../SYLLABUS.md) 起换 PyTorch，但到那时 `W1`、`dZ2`、缓存不再是黑箱。
+[ch16](ch16_training_dnn.md) 起换 PyTorch，但到那时 `W1`、`dZ2`、缓存不再是黑箱。
 
 ## 练习
 
