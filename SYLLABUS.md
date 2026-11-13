@@ -219,13 +219,24 @@
 > ② 无缩放残差 32 层激活 std 涨 `415` 倍、梯度涨 `122` 倍，**残差必须配归一化**；
 > ③ 2 层网络加 BN 是负收益（`2.45e-03` → `1.14e-02`）；④ `h=3` 换 Adam 仍 `0/20`，**只能加宽**。
 
-### 第 17 章 常见网络结构（Common Architectures） · [待写]
+### 第 17 章 常见网络结构（Common Architectures） · [已完成]
 
-> `ch17_architectures.md` ｜ `ch17_ex.py`
+> [教学](04_deep_learning/docs/ch17_architectures.md) · [练习](04_deep_learning/exercises/ch17_ex.py)
 
-**本章子概念索引：** 卷积神经网络（CNN）· 循环神经网络（RNN）· LSTM / GRU · Transformer · 自注意力（Self-Attention）· 多头注意力（Multi-Head Attention）
+**本章子概念索引：** 卷积神经网络（CNN）· 卷积核 / 通道 · 感受野（Receptive Field）· 步长 / 填充 · 深度可分离卷积 · IoU · NMS · 循环神经网络（RNN）· 隐状态 · BPTT · LSTM / GRU · 门控（Gating）· 注意力（Attention）· Q / K / V · 缩放点积注意力 · 因果掩码（Causal Mask）· 多头注意力（Multi-Head Attention）· 位置编码（Positional Encoding）· 归纳偏置（Inductive Bias）· 选型判据
 
-**节骨架：** 17.1 CNN ｜ 17.2 RNN / LSTM / GRU ｜ 17.3 Transformer 与自注意力
+**节骨架：** 17.1 CNN ｜ 17.2 RNN / LSTM / GRU ｜ 17.3 注意力与 Transformer ｜ 17.4 三条路线怎么选
+
+> **结构备注**：原骨架 3 节，**新增 17.4「三条路线怎么选」**——把 CNN / RNN / Transformer
+> 的归纳偏置、参数量、并行性摆在一张表里，并接到第 7 篇的以图搜图（骨干出 embedding）。
+> CNN 的 **IoU + NMS** 单独成块（视觉组面试必考，也是检测后处理的实际内容）。
+> 手写 `conv2d` 与 `torch.nn.Conv2d` 最大绝对差 `7.105e-15`。
+> 关键实测：3×3 conv 256→256 要 `590,080` 参数，1×1 只要 `65,792`，深度可分离合计 `68,352`；
+> 10 层 3×3 感受野 `21`。简单 RNN 40 步后首层梯度只剩末层的 `7.1e-15`；
+> LSTM forget gate `0.9933` 时 40 步还剩 `0.7644`，`0.5` 时归零。
+> `q·k` 的点积 std 恰好 ≈ `√d_k`（`d_k=1024` 到 `31.99`）；不缩放时 `d_k=256` 的 softmax
+> 最大权重 `0.9992`、熵 `0.007`。`n=2048` 一次 8 头注意力 `3355 万`个分数、CPU `122.8 ms`。
+> **如实记录**：NMS 阈值 `0.5` 与 `0.9` 保留框数差 2.5 倍（`[0,4]` vs 全部 5 个），没有「最佳阈值」。
 
 ---
 

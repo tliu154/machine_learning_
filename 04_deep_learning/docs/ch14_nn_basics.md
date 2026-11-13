@@ -348,7 +348,7 @@ def train_network(X, y, h=4, lr=0.5, steps=10000, seed=0, scale=0.5):
 - **全批量梯度下降撑不住大数据**：这里 120 个样本一把梭没问题，
   真实图像数据要小批量 + 动量 / Adam，那是 [ch16](ch16_training_dnn.md)。
 - **别把这套手写网络直接搬去跑图像**：全连接层把 $224\times224\times3$ 拍平会炸参数量，
-  图像要 [ch17 的 CNN](../../SYLLABUS.md)。
+  图像要 [ch17 的 CNN](ch17_architectures.md#c17-01)。
   [以图搜图终点](../../06_engineering/README.md) 用的是预训练模型抽 embedding，不是从零训这个。
 - **`train/val` 都 1.0 不代表通用**：XOR 只有 2 维、160 个点。
   判断泛化还是要看 [ch05 学习曲线](../../01_ml_framework/docs/ch05_error_sources.md) 和

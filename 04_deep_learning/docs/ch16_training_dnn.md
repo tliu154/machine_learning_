@@ -526,4 +526,4 @@ ch14~ch16 的全部手写，就是为了让你在 `loss.backward()` 出问题时
 | 训练好验证差 | Dropout、权重衰减、早停 | 数据泄漏（[ch10](../../02_supervised/docs/ch10_feature_engineering.md)） |
 | 深层网络训不动 | 加 BN、加残差（**两个一起**） | 换更小的深度 |
 
-下一篇：第 17 章 常见网络结构（CNN / RNN / Transformer）
+下一篇：[第 17 章 常见网络结构](ch17_architectures.md)（CNN / RNN / Transformer）

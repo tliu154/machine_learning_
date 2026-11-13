@@ -1,6 +1,6 @@
 # 第 6 篇 现代机器学习与 LLM（Modern ML and LLM）
 
-**章号 18~19** ｜ 前置：ch17（Transformer / 自注意力）
+**章号 18~19** ｜ 前置：[ch17（Transformer / 自注意力）](../04_deep_learning/docs/ch17_architectures.md#c17-03)
 
 章节清单与状态看 [SYLLABUS 第 6 篇](../SYLLABUS.md)。**这一篇是本次大纲调整新补的** —— 原框架从深度学习直接跳到工程实践，缺了近十年最重要的一块。
 
