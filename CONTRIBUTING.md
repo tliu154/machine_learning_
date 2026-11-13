@@ -145,7 +145,8 @@ python tools/verify_all.py
    **凡是「成功率 / 稳定性 / 平均表现」这类结论，必须跑多种子**：只报一个好看的 seed 会骗人。
    ch15 里 `seed=0` 换初始化把 val 从 `0.75` 救到 `1.00`，但 20 种子成功率仍只有 `0.40~0.60`，
    正确结论是「换初值只是换优化起点，不是提升上限」—— 单个 seed 会得出相反结论。
-3. 教学里的 sklearn 对照代码也要实测一致；**练习一律不 import sklearn**。
+3. 教学里的 sklearn / torch 对照代码也要实测一致；**练习一律不 import sklearn / torch**。
+   torch 只有教学文档里的 16.6 用，装法见第 8 节。
 4. 交付收尾清单：`SYLLABUS` 状态 → 根 README 进度汇总 → 篇 README 跳读注 / 练习方向 →
    `tools/verify_all.py` → 一章一个 commit → push → 项目日志。
 5. 章号撞名：`python_basics/exercises/chNN_ex.py` 是基础教程自己的章号（ch01~ch12），
@@ -170,3 +171,25 @@ GIT_TERMINAL_PROMPT=1 git -c credential.helper=manager \
 ```
 
 中文路径：Git Bash 下 `git -C "/d/我的知识库/..."` 会失败，改用 `cd "..." && git ...`。
+
+## 8. 装 CPU 版 torch（隔离 venv，2026-11 实测可行）
+
+`pip install torch --index-url https://download.pytorch.org/whl/cpu` 在本机会**卡在依赖元数据**，
+而且前台命令超过 120 s 会被切掉，装出一半的包会报 `DLL load failed` / `No module named 'sympy.utilities'`。
+可靠流程是**自己下载 wheel 再本地装**：
+
+```bash
+# 1) 分段续传（每段 <110 s，中断后用 -C - 续上）
+curl -sS -C - --max-time 110 -o _torch.whl \
+  "https://download.pytorch.org/whl/cpu/torch-2.9.1%2Bcpu-cp313-cp313-win_amd64.whl"
+# 2) 文件名必须是合法 wheel 名（torch-<ver>+cpu-<py>-<abi>-<plat>.whl），否则 pip 报 Invalid wheel filename
+# 3) 装（依赖走国内源，快很多）
+python -m pip install --no-cache-dir "torch-2.9.1+cpu-cp313-cp313-win_amd64.whl" \
+  -i https://mirrors.aliyun.com/pypi/simple/
+# 4) 自检
+python -c "import torch; print(torch.__version__)"
+```
+
+装了 torch 之后，`torch.optim.*` 会拉起 `torch._dynamo` → `sympy`，
+**sympy 装残缺会报 `No module named 'sympy.utilities'`**（重装 sympy 即可）。
+`pip install` 用后台任务跑容易被回收，长安装建议前台分段或边跑边等。
