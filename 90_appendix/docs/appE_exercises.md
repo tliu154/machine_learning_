@@ -1,6 +1,6 @@
 # 附录 E 练习索引（Exercise Index）
 
-全仓库 **27 份**练习的总入口。**这里只放链接，不重复存答案** —— 参考答案统一留在各
+全仓库 **28 份**练习的总入口。**这里只放链接，不重复存答案** —— 参考答案统一留在各
 `chNN_ex.py` 末尾的 `# region 参考答案` / `# endregion` 之间（PyCharm 里可折叠），
 改答案只改那一处，不用同步两个地方。
 
@@ -10,7 +10,7 @@
 
 > ⚠️ **章号撞名**：`00_foundations/python_basics/exercises/` 里的 `ch01`~`ch12` 是
 > **Python 基础教程自己的章号**，与 ML 全局章号（ch04 训练三步骤、ch06 评估指标……）毫无关系。
-> 两套 `ch04_ex.py` / `ch06_ex.py` / `ch07_ex.py` 等内容完全不同，
+> 两套 `ch04_ex.py` / `ch06_ex.py` / `ch07_ex.py` / `ch11_ex.py` 等内容完全不同，
 > **按下面的完整路径打开，别只搜文件名**。ML 侧练习的 docstring 里也写了这句区分说明。
 
 ---
@@ -66,6 +66,12 @@
 | [ch08_ex.py](../../02_supervised/exercises/ch08_ex.py) | 第 8 章 | 经典分类：KNN、基尼/熵、递归决策树、RBF 核 |
 | [ch09_ex.py](../../02_supervised/exercises/ch09_ex.py) | 第 9 章 | 集成方法：Bagging 投票、Bootstrap、梯度提升残差 |
 | [ch10_ex.py](../../02_supervised/exercises/ch10_ex.py) | 第 10 章 | 特征工程：fit/apply 分离、编码、IQR 裁剪、亲手量化泄漏 |
+
+## 第 4 篇 无监督学习（`03_unsupervised/`）
+
+| 练习 | 章 | 主题 |
+|---|---|---|
+| [ch11_ex.py](../../03_unsupervised/exercises/ch11_ex.py) | 第 11 章 | 聚类：距离矩阵、K-means 分配/更新/收敛、缩放前后对比、三种 linkage、DBSCAN 与 eps 扫描、轮廓系数与 K 扫描 |
 
 ---
 

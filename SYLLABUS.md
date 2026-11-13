@@ -131,13 +131,17 @@
 
 前置：第 2 篇（评估）、第 10 章（缩放）。
 
-### 第 11 章 聚类（Clustering） · [待写]
+### 第 11 章 聚类（Clustering） · [已完成]
 
-> `ch11_clustering.md` ｜ `ch11_ex.py`
+> [教学](03_unsupervised/docs/ch11_clustering.md) · [练习](03_unsupervised/exercises/ch11_ex.py)
 
-**本章子概念索引：** K-means · 层次聚类（Hierarchical Clustering）· DBSCAN · 聚类评估（Clustering Evaluation）
+**本章子概念索引：** K-means · 质心 / 惯性 / 局部最优 · 层次聚类（Hierarchical Clustering）· 树状图 / 连接方式 / 链式效应 · DBSCAN · 核心点 / 边界点 / 噪声 · 轮廓系数 · 肘部法 · 调整兰德指数（ARI）
 
-**节骨架：** 11.1 K-means ｜ 11.2 层次聚类 ｜ 11.3 DBSCAN ｜ 11.4 评估与簇数选择
+**节骨架：** 11.1 K-means ｜ 11.2 层次聚类 ｜ 11.3 DBSCAN ｜ 11.4 聚类评估与簇数选择
+
+> **本篇教学重点**：没有真值，指标只是启发式。实测在两同心环上，分错的 K-means
+> 轮廓系数 `0.3280` 反而高于分对的 DBSCAN `0.1574`；缩放前后对齐准确率 `0.5000 → 1.0000`。
+> 教学里的 sklearn 对照代码需 `pip install scikit-learn`，**练习一律只用 numpy**。
 
 ### 第 12 章 降维与表示（Dimensionality Reduction） · [待写]
 

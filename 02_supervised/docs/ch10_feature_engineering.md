@@ -294,4 +294,4 @@ print(pipe.score(X_va, y_va))     # transform 时自动复用训练集的统计�
 保证本文件独立运行；**全部只用 numpy**，跑通所有 `assert` 即过关。
 
 上一篇：[第 9 章 集成方法](ch09_ensemble.md)
-下一篇：第 11 章 聚类（待写，见 [SYLLABUS](../../SYLLABUS.md)）
+下一篇：[第 11 章 聚类](../../03_unsupervised/docs/ch11_clustering.md)
