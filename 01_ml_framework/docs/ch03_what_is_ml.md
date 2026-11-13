@@ -263,5 +263,5 @@ y_reg = np.sin(2 * np.pi * x_tr)       # 回归：同一个 x，换个 y 就换�
 漂移后重学、自监督伪标签、无监督 2-means、任务类型判定、以及亲眼看到自训练为什么不涨，
 共 8 题。文件**只用 numpy**，跑通所有 `assert` 即过关。
 
-上一篇：第 2 章 数学基础（待写，见 [SYLLABUS](../../SYLLABUS.md)）
+上一篇：[第 2 章 数学基础](../../00_foundations/docs/ch02_math_foundations.md)
 下一篇：[第 4 章 训练三步骤](ch04_training_steps.md)

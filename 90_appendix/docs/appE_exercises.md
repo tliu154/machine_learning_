@@ -1,6 +1,6 @@
 # 附录 E 练习索引（Exercise Index）
 
-全仓库 **26 份**练习的总入口。**这里只放链接，不重复存答案** —— 参考答案统一留在各
+全仓库 **27 份**练习的总入口。**这里只放链接，不重复存答案** —— 参考答案统一留在各
 `chNN_ex.py` 末尾的 `# region 参考答案` / `# endregion` 之间（PyCharm 里可折叠），
 改答案只改那一处，不用同步两个地方。
 
@@ -38,6 +38,12 @@
 | [ch07](../../00_foundations/python_basics/exercises/ch07_ex.py) | 函数 | [ch08](../../00_foundations/python_basics/exercises/ch08_ex.py) | 迭代器与生成器 |
 | [ch09](../../00_foundations/python_basics/exercises/ch09_ex.py) | 文件与异常 | [ch10](../../00_foundations/python_basics/exercises/ch10_ex.py) | 类与面向对象 |
 | [ch11](../../00_foundations/python_basics/exercises/ch11_ex.py) | 模块与包 | [ch12](../../00_foundations/python_basics/exercises/ch12_ex.py) | 递归 |
+
+### 数学基础（对应第 2 章）
+
+| 练习 | 章 | 主题 |
+|---|---|---|
+| [ch02_ex.py](../../00_foundations/exercises/ch02_ex.py) | 第 2 章 | 向量/矩阵与 `@`、频率收敛、贝叶斯后验、均值方差与 `ddof`、中心差分与偏导、MSE 梯度、负梯度最陡下坡、链式法则数值验证 |
 
 配套速查表：[appendix_cheatsheet.md](../../00_foundations/data_stack/docs/appendix_cheatsheet.md)。
 

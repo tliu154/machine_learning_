@@ -76,7 +76,9 @@ $$L(\theta) = \frac{1}{n}\sum_{i=1}^{n}\left(y_i - \hat{y}_i\right)^2$$
 
 - 中文叙述，代码/术语保留英文
 - **不重复讲编程基础**，只讲与 C++ / 已有认知的差异
-- 一章 **250~330 行**（已写 6 章实测 253~335 行）：子概念索引 + 若干五段节 + 实测表 + 小结表，
-  压不到 150 行；超过 350 行应拆节或拆章，**别硬删「常见误区」和「什么时候会翻车」**。
-  一节五段模板见 [`_templates/concept_section.md`](_templates/concept_section.md)
+- **按节控长度，不按总行数硬卡**：常规章（4~7 节）一节约 30~45 行，全章实测 253~335 行；
+  ch02 这类 8 节 + 每节「理论基础 / 实际应用」双段 + 章首按需导航表的章，实测约 430 行。
+  单节超过约 45 行才该拆节或拆章，**别硬删「常见误区」「够用边界」和「什么时候会翻车」**。
+  一节五段模板见 [`_templates/concept_section.md`](_templates/concept_section.md)，
+  双段变体见 [CONTRIBUTING.md](CONTRIBUTING.md) 第 2 节
 - 章节状态只在 [SYLLABUS.md](SYLLABUS.md) 维护

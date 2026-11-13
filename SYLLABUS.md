@@ -37,13 +37,17 @@
 | 1.5 | Matplotlib 可视化 | [已完成] | `data_stack/docs/plt01_plot.md` + 1 份练习 |
 | 1.6 | 最小实践：加载 → 清洗 → 计算 → 可视化 | [待写] | — |
 
-### 第 2 章 数学基础（Mathematical Foundations） · [待写]
+### 第 2 章 数学基础（Mathematical Foundations） · [已完成]
 
-> 文件：`00_foundations/docs/ch02_math_foundations.md` ｜ 练习：`ch02_ex.py`
+> [教学](00_foundations/docs/ch02_math_foundations.md) · [练习](00_foundations/exercises/ch02_ex.py)
 
 **本章子概念索引：** 向量与矩阵（Vectors and Matrices）· 矩阵乘法（Matrix Multiplication）· 概率分布（Probability Distribution）· 条件概率与贝叶斯（Conditional Probability and Bayes）· 期望与方差（Expectation and Variance）· 导数与偏导（Derivative）· 梯度（Gradient）· 链式法则（Chain Rule）
 
-**节骨架：** 2.1 线性代数直觉 ｜ 2.2 概率与统计直觉 ｜ 2.3 微积分与梯度 ｜ 2.4 数学在 ML 中的位置
+**节骨架（8 节，一个概念一节）：** 2.1 向量与矩阵 ｜ 2.2 矩阵乘法 ｜ 2.3 概率分布 ｜ 2.4 条件概率与贝叶斯 ｜ 2.5 期望与方差 ｜ 2.6 导数与偏导 ｜ 2.7 梯度 ｜ 2.8 链式法则
+
+> **结构特例**：读者数学基础薄弱、要求**按需补学**，故把原「四板块」拆成 8 个可独立跳读的概念节，
+> **每节分「理论基础 / 实际应用」两段**，章首加「按需补学导航表」，每节标「够用边界」；
+> 原 2.4「数学在 ML 中的位置」压成章末随查表，不单独占节。写法见 [CONTRIBUTING.md](CONTRIBUTING.md) 第 2 节。
 
 ---
 

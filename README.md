@@ -17,11 +17,12 @@
 | [`tools/verify_all.py`](tools/verify_all.py) | 一键自检：练习参考答案 + 相对链接 + 显式锚点 |
 | [00_foundations/data_stack/](00_foundations/data_stack/) | 已完成：numpy / pandas / matplotlib 7 篇教学 + 6 份练习 |
 | [00_foundations/python_basics/](00_foundations/python_basics/README.md) | 已完成：Python 基础语法 13 篇教学 + 12 份练习 |
+| [00_foundations/docs/ch02_math_foundations.md](00_foundations/docs/ch02_math_foundations.md) | 已完成：ML 第 2 章 数学基础（**按需补学**：每节「理论基础 / 实际应用」） |
 | [01_ml_framework/docs/ch03_what_is_ml.md](01_ml_framework/docs/ch03_what_is_ml.md) | 已完成：ML 第 3 章 机器学习是什么（第 2 篇收口） |
 | [01_ml_framework/docs/ch04_training_steps.md](01_ml_framework/docs/ch04_training_steps.md) | 已完成：ML 第 4 章 训练三步骤 |
 | [01_ml_framework/docs/ch05_error_sources.md](01_ml_framework/docs/ch05_error_sources.md) | 已完成：ML 第 5 章 误差来源与模型选择 |
 | [01_ml_framework/docs/ch06_evaluation_metrics.md](01_ml_framework/docs/ch06_evaluation_metrics.md) | 已完成：ML 第 6 章 评估指标 |
-| [90_appendix/docs/appE_exercises.md](90_appendix/docs/appE_exercises.md) | 已完成：附录 E 全部 26 份练习索引 |
+| [90_appendix/docs/appE_exercises.md](90_appendix/docs/appE_exercises.md) | 已完成：附录 E 全部 27 份练习索引 |
 | [02_supervised/docs/ch07_linear_models.md](02_supervised/docs/ch07_linear_models.md) | 已完成：ML 第 7 章 线性模型 |
 | [02_supervised/docs/ch08_classical_classifiers.md](02_supervised/docs/ch08_classical_classifiers.md) | 已完成：ML 第 8 章 经典分类算法 |
 | [02_supervised/docs/ch09_ensemble.md](02_supervised/docs/ch09_ensemble.md) | 已完成：ML 第 9 章 集成方法 |
@@ -44,7 +45,7 @@
 | 第 15 / 16 章 | **保留编号，允许合并** | 激活函数/初始化与训练技巧内容重叠，实际撰写时可合成一章，章号不删以便对照 |
 | 原模块前缀命名（np/pd/alg/dl…） | **改为全局章号** | `ch07_linear_models.md` 比 `alg01_xxx.md` 更直观，且章跨篇移动时不用改名 |
 
-**原风格保留不变**：C++ 迁移导向（只讲差异）、一章 250~330 行（实测表 + 五段模板的真实体量，
+**原风格保留不变**：C++ 迁移导向（只讲差异）、按节控长度（常规章 250~335 行，
 见 [NOTATION.md](NOTATION.md)）、教学配练习、`assert` 自测、`# region` 折叠答案、
 固定随机种子、不依赖大文件。
 
@@ -78,7 +79,8 @@ machine_learning/
 ├── tools/                 verify_all.py：全仓库自检
 ├── 00_foundations/        第1篇 基础工具与数学直觉
 │   ├── data_stack/        [已完成] numpy/pandas/matplotlib 全套
-│   └── python_basics/     [已完成] 基础语法 ch01~ch12
+│   ├── python_basics/     [已完成] 基础语法 ch01~ch12
+│   └── docs/ + exercises/ [已完成] 第 2 章 数学基础（ch02）
 ├── 01_ml_framework/       第2篇 机器学习基础框架
 ├── 02_supervised/         第3篇 监督学习
 ├── 03_unsupervised/       第4篇 无监督学习
@@ -99,12 +101,15 @@ machine_learning/
 ```
 
 外加一节「和 C++ / 已有认知的差异」——这是这套笔记从第一天起的特色，不丢。
+**变体**：[第 2 章数学基础](00_foundations/docs/ch02_math_foundations.md)按读者要求改成
+每节「理论基础 / 实际应用」两大块 + 章首按需补学导航表，详见 [CONTRIBUTING.md](CONTRIBUTING.md) 第 2 节。
 
 ## 进度
 
 - **已完成**：
   - 第 1 篇 1.1：Python 基础语法 13 篇教学 + 12 份练习（[python_basics](00_foundations/python_basics/README.md)）
   - 第 1 篇 1.3~1.5：三件套 7 篇教学 + 6 份练习 + 1 份速查表（[data_stack](00_foundations/data_stack/README.md)）
+  - 第 2 章：数学基础 1 篇教学 + 1 份练习（[ch02](00_foundations/docs/ch02_math_foundations.md)）—— **按需补学结构**，8 节各分「理论基础 / 实际应用」
   - 第 3 章：机器学习是什么 1 篇教学 + 1 份练习（[ch03](01_ml_framework/docs/ch03_what_is_ml.md)）
   - 第 4 章：训练三步骤 1 篇教学 + 1 份练习（[ch04](01_ml_framework/docs/ch04_training_steps.md)）
   - 第 5 章：误差来源与模型选择 1 篇教学 + 1 份练习（[ch05](01_ml_framework/docs/ch05_error_sources.md)）—— **第 2 篇收口**
@@ -113,12 +118,12 @@ machine_learning/
   - 第 8 章：经典分类算法 1 篇教学 + 1 份练习（[ch08](02_supervised/docs/ch08_classical_classifiers.md)）
   - 第 9 章：集成方法 1 篇教学 + 1 份练习（[ch09](02_supervised/docs/ch09_ensemble.md)）
   - 第 10 章：特征工程 1 篇教学 + 1 份练习（[ch10](02_supervised/docs/ch10_feature_engineering.md)）—— **第 3 篇收口**
-  - 附录 E：26 份练习总索引（[appE](90_appendix/docs/appE_exercises.md)，只放链接不存答案）
-  - 合计 **28 篇教学 + 26 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
+  - 附录 E：27 份练习总索引（[appE](90_appendix/docs/appE_exercises.md)，只放链接不存答案）
+  - 合计 **29 篇教学 + 27 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
 - **已规划**：24 章 + 6 个附录，约 150 个概念小节，全部列在 [SYLLABUS.md](SYLLABUS.md)
-- **下一步**：第 2 篇（ch03~ch06）与第 3 篇（ch07~ch10）均已收口 → 按依赖顺序开
+- **下一步**：第 1 篇 ch02、第 2 篇 ch03~ch06、第 3 篇 ch07~ch10 均已收口 → 按依赖顺序开
   ch11 聚类（第 4 篇开篇，前置「误差诊断 ch05 + 评估 ch06 + 缩放 ch10」均已齐）；
-  或回头补第 1 篇的 ch02 数学基础
+  或回头补第 1 篇剩下的 1.2 环境配置 / 1.6 最小实践
 
 ## 快速开始
 
