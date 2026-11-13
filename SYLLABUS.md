@@ -143,13 +143,18 @@
 > 轮廓系数 `0.3280` 反而高于分对的 DBSCAN `0.1574`；缩放前后对齐准确率 `0.5000 → 1.0000`。
 > 教学里的 sklearn 对照代码需 `pip install scikit-learn`，**练习一律只用 numpy**。
 
-### 第 12 章 降维与表示（Dimensionality Reduction） · [待写]
+### 第 12 章 降维与表示（Dimensionality Reduction） · [已完成]
 
-> `ch12_dimensionality.md` ｜ `ch12_ex.py`
+> [教学](03_unsupervised/docs/ch12_dimensionality.md) · [练习](03_unsupervised/exercises/ch12_ex.py)
 
-**本章子概念索引：** 主成分分析（PCA）· t-SNE · UMAP · 自编码器（Autoencoder）
+**本章子概念索引：** 主成分分析（PCA）· 协方差矩阵 · 特征值分解 · 解释方差比 · 重构误差 · 白化 · t-SNE · KL 散度 · UMAP · 保邻域率 · 自编码器 · 瓶颈 · 线性 AE ≡ PCA · 召回率 / 计算量权衡
 
-**节骨架：** 12.1 PCA ｜ 12.2 t-SNE 与 UMAP ｜ 12.3 自编码器
+**节骨架：** 12.1 PCA ｜ 12.2 t-SNE 与 UMAP ｜ 12.3 自编码器 ｜ 12.4 降维的工程收益
+
+> **结构备注**：12.4 是撰写时补入的第四节，把「以图搜图里 embedding 降维的召回率 / 计算量权衡」
+> 独立成节便于实践轨道跳转（实测 64→16 维 recall@5 `0.740→0.700`、计算量 `1/4`；
+> 8 维崩到 `0.520`）。原骨架为 3 节。数学部分照顾基础薄弱：特征值与 KL 梯度都配读法、人话，
+> 不写推导证明；线性 AE 只用到 ch02 链式法则与 ch04 梯度下降，**反向传播留给第 14 章**。
 
 ### 第 13 章 其他无监督任务（Other Unsupervised Tasks） · [选读]
 

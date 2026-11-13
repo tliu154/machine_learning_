@@ -92,7 +92,8 @@ KNN 用距离找邻居（[ch08](../../02_supervised/docs/ch08_classical_classifi
 **常见误区**：**`X[0]` 是一个样本，`X[:, 0]` 是一个特征**，别看反。
 一维数组 `np.array([1,2,3])` 的 shape 是 `(3,)`，既不是行也不是列向量，喂 sklearn 前要 `reshape(-1, 1)`。
 
-**够用边界**：会看 shape、取行列、算 `norm` 就够；行列式、逆矩阵、特征值留给第 12 章 PCA。
+**够用边界**：会看 shape、取行列、算 `norm` 就够；行列式、逆矩阵不必学，
+特征值等到 [第 12 章 12.1 PCA](../../03_unsupervised/docs/ch12_dimensionality.md#c12-01) 会用一句话讲清它在干什么。
 
 **对应练习**：[第 1、2 题](../exercises/ch02_ex.py)
 

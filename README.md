@@ -22,12 +22,13 @@
 | [01_ml_framework/docs/ch04_training_steps.md](01_ml_framework/docs/ch04_training_steps.md) | 已完成：ML 第 4 章 训练三步骤 |
 | [01_ml_framework/docs/ch05_error_sources.md](01_ml_framework/docs/ch05_error_sources.md) | 已完成：ML 第 5 章 误差来源与模型选择 |
 | [01_ml_framework/docs/ch06_evaluation_metrics.md](01_ml_framework/docs/ch06_evaluation_metrics.md) | 已完成：ML 第 6 章 评估指标 |
-| [90_appendix/docs/appE_exercises.md](90_appendix/docs/appE_exercises.md) | 已完成：附录 E 全部 28 份练习索引 |
+| [90_appendix/docs/appE_exercises.md](90_appendix/docs/appE_exercises.md) | 已完成：附录 E 全部 29 份练习索引 |
 | [02_supervised/docs/ch07_linear_models.md](02_supervised/docs/ch07_linear_models.md) | 已完成：ML 第 7 章 线性模型 |
 | [02_supervised/docs/ch08_classical_classifiers.md](02_supervised/docs/ch08_classical_classifiers.md) | 已完成：ML 第 8 章 经典分类算法 |
 | [02_supervised/docs/ch09_ensemble.md](02_supervised/docs/ch09_ensemble.md) | 已完成：ML 第 9 章 集成方法 |
 | [02_supervised/docs/ch10_feature_engineering.md](02_supervised/docs/ch10_feature_engineering.md) | 已完成：ML 第 10 章 特征工程（第 3 篇收口） |
 | [03_unsupervised/docs/ch11_clustering.md](03_unsupervised/docs/ch11_clustering.md) | 已完成：ML 第 11 章 聚类（第 4 篇开篇） |
+| [03_unsupervised/docs/ch12_dimensionality.md](03_unsupervised/docs/ch12_dimensionality.md) | 已完成：ML 第 12 章 降维与表示（含以图搜图的召回率 / 计算量权衡） |
 
 ## 本次框架调整：采纳什么、改什么
 
@@ -84,7 +85,7 @@ machine_learning/
 │   └── docs/ + exercises/ [已完成] 第 2 章 数学基础（ch02）
 ├── 01_ml_framework/       第2篇 机器学习基础框架
 ├── 02_supervised/         第3篇 监督学习
-├── 03_unsupervised/       第4篇 无监督学习（ch11 聚类已完成）
+├── 03_unsupervised/       第4篇 无监督学习（ch11 聚类 / ch12 降维已完成）
 ├── 04_deep_learning/      第5篇 深度学习
 ├── 05_llm/                第6篇 现代机器学习与 LLM
 ├── 06_engineering/        第7篇 工程实践（含 projects/ 实践轨道）
@@ -120,11 +121,12 @@ machine_learning/
   - 第 9 章：集成方法 1 篇教学 + 1 份练习（[ch09](02_supervised/docs/ch09_ensemble.md)）
   - 第 10 章：特征工程 1 篇教学 + 1 份练习（[ch10](02_supervised/docs/ch10_feature_engineering.md)）—— **第 3 篇收口**
   - 第 11 章：聚类 1 篇教学 + 1 份练习（[ch11](03_unsupervised/docs/ch11_clustering.md)）—— **第 4 篇开篇**
-  - 附录 E：28 份练习总索引（[appE](90_appendix/docs/appE_exercises.md)，只放链接不存答案）
-  - 合计 **30 篇教学 + 28 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
+  - 第 12 章：降维与表示 1 篇教学 + 1 份练习（[ch12](03_unsupervised/docs/ch12_dimensionality.md)）
+  - 附录 E：29 份练习总索引（[appE](90_appendix/docs/appE_exercises.md)，只放链接不存答案）
+  - 合计 **31 篇教学 + 29 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
 - **已规划**：24 章 + 6 个附录，约 150 个概念小节，全部列在 [SYLLABUS.md](SYLLABUS.md)
-- **下一步**：第 1~3 篇已全部收口，第 4 篇 ch11 聚类已完成 → 按依赖顺序接
-  ch12 降维与表示（PCA / t-SNE / 自编码器，直接服务以图搜图的 embedding 降维）；
+- **下一步**：第 1~3 篇已收口、第 4 篇 ch11 / ch12 已完成 → 按依赖顺序进
+  第 5 篇 ch14 神经网络基础（ch13 是 `[选读]`，可跳过；ch12 的非线性 AE 正好在那里接上）；
   或回头补第 1 篇剩下的 1.2 环境配置 / 1.6 最小实践
 
 ## 快速开始

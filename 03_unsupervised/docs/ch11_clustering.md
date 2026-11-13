@@ -245,7 +245,7 @@ def dbscan(X, eps, min_samples=5):
 太小几乎全是噪声、太大把两个环并成一团，中间只有一个窄窗口是对的。
 **DBSCAN 不是「不用调 K」就省事了，它把 K 换成了更难调的 $\varepsilon$**，
 而且高维下距离本身失效（[ch08](../../02_supervised/docs/ch08_classical_classifiers.md#c08-01) 讲过），
-所以以图搜图里通常先降维（第 12 章）再聚类。
+所以以图搜图里通常先[降维](ch12_dimensionality.md)再聚类。
 
 **对应练习**：[第 8、9 题](../exercises/ch11_ex.py)（含环形数据上 K-means 失败 / DBSCAN 成功的亲手复现）
 
@@ -347,7 +347,7 @@ inertia 一路降到 40.736、毫无「肘部」可挑；**轮廓系数在 $K=3$
 > 3. **拿轮廓系数当验收标准** —— 环形数据上它给错结果 0.3280、给对结果 0.1574
 
 **和实践终点的联系**：以图搜图的链路里，预训练模型抽出 embedding 后，
-先降维（第 12 章）再聚类做粗分组 / 建索引，正是本章的直接用途，
+先[降维](ch12_dimensionality.md)再聚类做粗分组 / 建索引，正是本章的直接用途，
 见 [`06_engineering/README.md`](../../06_engineering/README.md)。
 高维 embedding 上尤其记住两件事：**先降维**、**别信单一指标**。
 
@@ -358,4 +358,4 @@ inertia 一路降到 40.736、毫无「肘部」可挑；**轮廓系数在 $K=3$
 **全部只用 numpy**，跑通所有 `assert` 即过关。
 
 上一篇：[第 10 章 特征工程](../../02_supervised/docs/ch10_feature_engineering.md)
-下一篇：第 12 章 降维与表示（见 [SYLLABUS](../../SYLLABUS.md) 的预定路径）
+下一篇：[第 12 章 降维与表示](ch12_dimensionality.md)
