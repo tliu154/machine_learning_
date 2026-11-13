@@ -368,7 +368,7 @@ $$\frac{dL}{dw}=\frac{dL}{d\hat y}\cdot\frac{d\hat y}{dw}$$
 
 **实际应用**
 
-反向传播（第 14 章）从头到尾只是在对计算图重复这一条。单样本 $L=(y-(wx+b))^2$，
+[反向传播](../../04_deep_learning/docs/ch14_nn_basics.md#c14-04) 从头到尾只是在对计算图重复这一条。单样本 $L=(y-(wx+b))^2$，
 取 $x=2,y=5,w=1,b=1$（于是 $\hat y=3$、误差 $=2$）：
 
 ```python
@@ -402,7 +402,7 @@ $\sigma(1-\sigma)=0.235004$，与中心差分 `0.235004` 一致。
 | 向量 / 矩阵 / 长度 | 数据表 `X`、参数 `theta`、正则项、样本距离 | 全仓库；[ch08](../../02_supervised/docs/ch08_classical_classifiers.md)、[ch05](../../01_ml_framework/docs/ch05_error_sources.md) |
 | 矩阵乘法 / 转置 | 一次前向 `X @ theta`、梯度汇总 `A.T @ err` | [ch04](../../01_ml_framework/docs/ch04_training_steps.md)、[ch07](../../02_supervised/docs/ch07_linear_models.md) |
 | 概率 / 条件概率 / 期望方差 | 噪声、朴素贝叶斯、标准化、偏差—方差、各类指标 | [ch08](../../02_supervised/docs/ch08_classical_classifiers.md)、[ch10](../../02_supervised/docs/ch10_feature_engineering.md)、[ch06](../../01_ml_framework/docs/ch06_evaluation_metrics.md) |
-| 导数 / 梯度 / 链式法则 | `w -= lr * dw`、反向传播、梯度消失 | [ch04](../../01_ml_framework/docs/ch04_training_steps.md)、第 14~15 章 |
+| 导数 / 梯度 / 链式法则 | `w -= lr * dw`、反向传播、梯度消失 | [ch04](../../01_ml_framework/docs/ch04_training_steps.md)、[ch14](../../04_deep_learning/docs/ch14_nn_basics.md#c14-04) |
 
 | C++ / 已有认知 | 本章写法 |
 |---|---|

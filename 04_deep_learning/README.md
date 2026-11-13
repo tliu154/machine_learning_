@@ -9,6 +9,22 @@
 ch14 用 numpy 实现两层网络（含反向传播），ch15/16 才引入框架的训练技巧，
 ch17 讲结构。**不把框架当黑箱**是这篇的底线。
 
+## 已完成：第 14 章 神经网络基础（docs/ + exercises/）
+
+[ch14 教学](docs/ch14_nn_basics.md) + [ch14 练习](exercises/ch14_ex.py)，12 题，参考答案通过自测。
+5 节：神经元与层、多层叠加（线性退化）、前向传播与缓存、反向传播、NumPy 两层网络。
+**全部只用 numpy，不引入任何框架**；教学里的 `LogisticRegression` 对照需 `pip install scikit-learn`。
+
+- 严格守 [ch02 2.8 的够用边界](../00_foundations/docs/ch02_math_foundations.md#c02-08)：
+  反向传播只讲「逐段连乘 + 中心差分验证」，不写 Jacobian、不写矩阵微分推导
+- 全参数数值梯度检验最大差 `8.3e-11`（[ch04](../01_ml_framework/docs/ch04_training_steps.md) 定的警戒线是 `1e-5`）
+- 在 [ch08 同一份 XOR](../02_supervised/docs/ch08_classical_classifiers.md) 上：
+  逻辑回归 val `0.675` → 手写两层网络 val **`1.0000`**，loss `0.690430 → 0.023061`
+- 隐藏层宽度 / 学习率扫描如实给非单调结果：`h=3` 反而比 `h=2` 差（局部最优），
+  `lr=10` 发散 —— 这正是 ch15 初始化与 ch16 优化器要解决的问题
+
+> `python_basics/exercises/` 只到 ch12，**ch14 没有撞名文件**。
+
 ## 和 C++ / OpenCV 经验的衔接
 
 - Tensor ≈ 带 autograd 的 ndarray，但形状约定是 `[N, C, H, W]`
@@ -19,7 +35,7 @@ ch17 讲结构。**不把框架当黑箱**是这篇的底线。
 
 ## 练习设计方向
 
-- ch14：numpy 手写 XOR 两层网络，验证损失下降（不用任何框架）
+- [ch14](exercises/ch14_ex.py)（已完成）：numpy 手写 XOR 两层网络，验证损失下降与全参数梯度检验（不用任何框架）
 - ch15：观察 Sigmoid 深层的梯度消失；对比不同初始化的激活值分布
 - ch16：写可复用的 `train_one_epoch` / `evaluate`
 - ch17：数卷积层输出尺寸与参数量；手写 IoU 与 NMS（**视觉组面试常考**）

@@ -155,7 +155,7 @@ print(mse_gradients(x, y, 1.0, 0.5))       # 解析
 print(numerical_gradient(x, y, 1.0, 0.5))  # 数值，应该几乎一样
 ```
 
-两个值差到 1e-5 以上，就是解析梯度写错了。这个习惯在 ch14 手写反向传播时能救命。
+两个值差到 1e-5 以上，就是解析梯度写错了。这个习惯在 [ch14 手写反向传播](../../04_deep_learning/docs/ch14_nn_basics.md#c14-04) 时能救命。
 
 ---
 

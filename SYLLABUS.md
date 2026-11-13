@@ -171,13 +171,19 @@
 前置：第 2 章（梯度与链式法则）、第 7 章（线性模型）。
 顺序：**先 numpy 手写，再上 PyTorch**，避免把框架当黑箱。
 
-### 第 14 章 神经网络基础（Neural Network Basics） · [待写]
+### 第 14 章 神经网络基础（Neural Network Basics） · [已完成]
 
-> `ch14_nn_basics.md` ｜ `ch14_ex.py`
+> [教学](04_deep_learning/docs/ch14_nn_basics.md) · [练习](04_deep_learning/exercises/ch14_ex.py)
 
-**本章子概念索引：** 神经元（Neuron）· 权重 / 偏置（Weight / Bias）· 激活函数（Activation Function）· 隐藏层 / 输出层（Hidden / Output Layer）· 前向传播（Forward Propagation）· 反向传播（Backpropagation）· 计算图（Computational Graph）
+**本章子概念索引：** 神经元（Neuron）· 权重 / 偏置（Weight / Bias）· 激活函数（Activation Function）· 隐藏层 / 输出层（Hidden / Output Layer）· 前向传播（Forward Propagation）· 反向传播（Backpropagation）· 计算图（Computational Graph）· 数值梯度检验（Gradient Checking）· 局部最优（Local Optimum）
 
 **节骨架：** 14.1 神经元与层 ｜ 14.2 多层叠加 ｜ 14.3 前向传播 ｜ 14.4 反向传播 ｜ 14.5 最小代码：NumPy 两层网络
+
+> **结构备注**：全章 **只用 numpy，不引入任何框架**（第 5 篇的底线），PyTorch 留到 ch15/16。
+> 反向传播严格守 [ch02 2.8 的够用边界](00_foundations/docs/ch02_math_foundations.md#c02-08)：
+> 只讲「逐段连乘 + 中心差分验证」，不写 Jacobian、不写矩阵微分推导。
+> 实测在 ch08 那份 XOR 上，逻辑回归 val `0.675` → 手写两层网络 val `1.0000`；
+> 全参数数值梯度检验最大差 `8.3e-11`。
 
 ### 第 15 章 激活函数与初始化（Activation and Initialization） · [待写]
 

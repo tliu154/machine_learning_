@@ -242,7 +242,7 @@ $$\frac{\partial L}{\partial W} = \frac{\partial L}{\partial M}V^{\top},\qquad
 
 后两行只是 [ch02 2.8 链式法则](../../00_foundations/docs/ch02_math_foundations.md#c02-08) 的矩阵版。
 **这里不需要反向传播**：把 $M=WV$ 当成两层线性层的复合，手推一次梯度即可；
-真正的多层 / 非线性网络要等 [第 14 章](../../SYLLABUS.md) 讲计算图和反向传播。
+真正的多层 / 非线性网络要等 [第 14 章](../../04_deep_learning/docs/ch14_nn_basics.md#c14-04) 讲计算图和反向传播。
 
 **最小代码**：
 
@@ -277,7 +277,7 @@ def train_linear_ae(Xc, k, lr=0.05, steps=5000, seed=0):
 **常见误区**：
 
 - **线性 AE 学不到 PCA 之外的东西**。想要更强的表示，必须加非线性激活（ReLU / tanh）
-  或堆深层 —— 那才需要反向传播，第 14 章再讲。
+  或堆深层 —— 那才需要[反向传播](../../04_deep_learning/docs/ch14_nn_basics.md#c14-04)（第 14 章）。
 - **学习率过大会发散，和 [ch04](../../01_ml_framework/docs/ch04_training_steps.md) 一模一样**。
   在未经缩放的原始数据上（最大特征值约 `100`）用 `lr=0.05`，**第 8 步就 `inf`**；
   把数据统一除以 10 之后同样的 `lr` 才稳定。`lr=0.001` 跑 20000 步还剩 `0.0192`，
@@ -348,4 +348,4 @@ def train_linear_ae(Xc, k, lr=0.05, steps=5000, seed=0):
 **全部只用 numpy**，跑通所有 `assert` 即过关。
 
 上一篇：[第 11 章 聚类](ch11_clustering.md)
-下一篇：第 13 章其他无监督任务（[选读]）或按依赖顺序进第 5 篇，见 [SYLLABUS](../../SYLLABUS.md)
+下一篇：[第 14 章 神经网络基础](../../04_deep_learning/docs/ch14_nn_basics.md)（第 13 章 `[选读]`，已跳过）
