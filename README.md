@@ -22,7 +22,7 @@
 | [01_ml_framework/docs/ch04_training_steps.md](01_ml_framework/docs/ch04_training_steps.md) | 已完成：ML 第 4 章 训练三步骤 |
 | [01_ml_framework/docs/ch05_error_sources.md](01_ml_framework/docs/ch05_error_sources.md) | 已完成：ML 第 5 章 误差来源与模型选择 |
 | [01_ml_framework/docs/ch06_evaluation_metrics.md](01_ml_framework/docs/ch06_evaluation_metrics.md) | 已完成：ML 第 6 章 评估指标 |
-| [90_appendix/docs/appE_exercises.md](90_appendix/docs/appE_exercises.md) | 已完成：附录 E 全部 30 份练习索引 |
+| [90_appendix/docs/appE_exercises.md](90_appendix/docs/appE_exercises.md) | 已完成：附录 E 全部 31 份练习索引 |
 | [02_supervised/docs/ch07_linear_models.md](02_supervised/docs/ch07_linear_models.md) | 已完成：ML 第 7 章 线性模型 |
 | [02_supervised/docs/ch08_classical_classifiers.md](02_supervised/docs/ch08_classical_classifiers.md) | 已完成：ML 第 8 章 经典分类算法 |
 | [02_supervised/docs/ch09_ensemble.md](02_supervised/docs/ch09_ensemble.md) | 已完成：ML 第 9 章 集成方法 |
@@ -30,6 +30,7 @@
 | [03_unsupervised/docs/ch11_clustering.md](03_unsupervised/docs/ch11_clustering.md) | 已完成：ML 第 11 章 聚类（第 4 篇开篇） |
 | [03_unsupervised/docs/ch12_dimensionality.md](03_unsupervised/docs/ch12_dimensionality.md) | 已完成：ML 第 12 章 降维与表示（含以图搜图的召回率 / 计算量权衡） |
 | [04_deep_learning/docs/ch14_nn_basics.md](04_deep_learning/docs/ch14_nn_basics.md) | 已完成：ML 第 14 章 神经网络基础（全 numpy 手写反向传播，第 5 篇开篇） |
+| [04_deep_learning/docs/ch15_activation_init.md](04_deep_learning/docs/ch15_activation_init.md) | 已完成：ML 第 15 章 激活函数与初始化（8 层梯度消失 / 爆炸实测，Xavier / He） |
 
 ## 本次框架调整：采纳什么、改什么
 
@@ -45,11 +46,11 @@
 | 锚点稳定 | **加强** | 中文 + 括号 + 英文的标题，GitHub 自动生成的 slug 不稳定（括号被吞、中英混排易变）。**一律用显式 `<a id="c07-01"></a>`**，索引链到显式 ID，不依赖自动 slug |
 | 第 0 章前言与符号约定 | **拆分** | 不单独建第 0 章（会和 README 重复维护）：定位/路径 → 本文件，模板 → CONTRIBUTING，符号术语 → `NOTATION.md` |
 | 附录 E 练习题与答案 | **只做索引** | 答案统一留在各练习文件的 `# region 参考答案` 里，不在附录重复存一份，避免改一处忘另一处 |
-| 第 15 / 16 章 | **保留编号，允许合并** | 激活函数/初始化与训练技巧内容重叠，实际撰写时可合成一章，章号不删以便对照 |
+| 第 15 / 16 章 | **保留编号，不合并** | 原备注「允许合并」已作废：ch15 的梯度消失 / 初始化实测已够一章，ch16 优化器 / 归一化是独立主题；编号保留以便对照 |
 | 原模块前缀命名（np/pd/alg/dl…） | **改为全局章号** | `ch07_linear_models.md` 比 `alg01_xxx.md` 更直观，且章跨篇移动时不用改名 |
 
-**原风格保留不变**：C++ 迁移导向（只讲差异）、按节控长度（常规章 250~335 行，
-见 [NOTATION.md](NOTATION.md)）、教学配练习、`assert` 自测、`# region` 折叠答案、
+**原风格保留不变**：C++ 迁移导向（只讲差异）、按节控长度（常规章约 60~90 行/节，
+整章 250~430 行，见 [NOTATION.md](NOTATION.md)）、教学配练习、`assert` 自测、`# region` 折叠答案、
 固定随机种子、不依赖大文件。
 
 ## 学习依赖顺序
@@ -87,7 +88,7 @@ machine_learning/
 ├── 01_ml_framework/       第2篇 机器学习基础框架
 ├── 02_supervised/         第3篇 监督学习
 ├── 03_unsupervised/       第4篇 无监督学习（ch11 聚类 / ch12 降维已完成）
-├── 04_deep_learning/      第5篇 深度学习（ch14 已完成）
+├── 04_deep_learning/      第5篇 深度学习（ch14 / ch15 已完成，全 numpy）
 ├── 05_llm/                第6篇 现代机器学习与 LLM
 ├── 06_engineering/        第7篇 工程实践（含 projects/ 实践轨道）
 ├── 07_topics/             第8篇 专题与负责任 ML
@@ -124,11 +125,12 @@ machine_learning/
   - 第 11 章：聚类 1 篇教学 + 1 份练习（[ch11](03_unsupervised/docs/ch11_clustering.md)）—— **第 4 篇开篇**
   - 第 12 章：降维与表示 1 篇教学 + 1 份练习（[ch12](03_unsupervised/docs/ch12_dimensionality.md)）
   - 第 14 章：神经网络基础 1 篇教学 + 1 份练习（[ch14](04_deep_learning/docs/ch14_nn_basics.md)）—— **第 5 篇开篇**（ch13 `[选读]` 跳过）
-  - 附录 E：30 份练习总索引（[appE](90_appendix/docs/appE_exercises.md)，只放链接不存答案）
-  - 合计 **32 篇教学 + 30 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
+  - 第 15 章：激活函数与初始化 1 篇教学 + 1 份练习（[ch15](04_deep_learning/docs/ch15_activation_init.md)）—— 8 层梯度消失 / 爆炸量化，了结 ch14 的 `h=3` 悬念
+  - 附录 E：31 份练习总索引（[appE](90_appendix/docs/appE_exercises.md)，只放链接不存答案）
+  - 合计 **33 篇教学 + 31 份练习**，参考答案全部由 [`tools/verify_all.py`](tools/verify_all.py) 执行自测通过
 - **已规划**：24 章 + 6 个附录，约 150 个概念小节，全部列在 [SYLLABUS.md](SYLLABUS.md)
-- **下一步**：第 1~4 篇均已收口 / 按需跳过，第 5 篇 ch14 已完成 → 接
-  ch15 激活函数与初始化（解释本章 `h=3` 卡局部最优、Sigmoid 梯度消失与初始化）；
+- **下一步**：第 1~4 篇均已收口 / 按需跳过，第 5 篇 ch14 / ch15 已完成 →
+  接 ch16 训练深度网络（优化器、归一化、残差，**从这里起引入 PyTorch**）；
   或回头补第 1 篇剩下的 1.2 环境配置 / 1.6 最小实践
 
 ## 快速开始
@@ -142,8 +144,9 @@ python tools/verify_all.py
 ```
 
 依赖：`pip install numpy pandas matplotlib scikit-learn`。
-`scikit-learn` 从 ch07 起只在**教学文档**里做库对照，**所有练习一律只用 numpy**；
-后续深度学习章节再按需加 `torch`。
+`scikit-learn` 从 ch07 起只在**教学文档**里做库对照，**所有练习一律只用 numpy**。
+ch14 / ch15 仍然全 numpy；**ch16 起才按需加 `torch`（CPU 版即可），
+装好并实跑过对照代码之后再把输出数字写进教学文档**。
 仓库不收录数据集和模型权重，练习数据全部现场生成或用临时目录。
 
 ## 添加一章的最短路径

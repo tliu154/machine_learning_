@@ -179,21 +179,27 @@
 
 **节骨架：** 14.1 神经元与层 ｜ 14.2 多层叠加 ｜ 14.3 前向传播 ｜ 14.4 反向传播 ｜ 14.5 最小代码：NumPy 两层网络
 
-> **结构备注**：全章 **只用 numpy，不引入任何框架**（第 5 篇的底线），PyTorch 留到 ch15/16。
+> **结构备注**：全章 **只用 numpy，不引入任何框架**（第 5 篇的底线），PyTorch 从 **ch16** 起
+> （ch15 讲逐层梯度机制，用 numpy 才看得透）。
 > 反向传播严格守 [ch02 2.8 的够用边界](00_foundations/docs/ch02_math_foundations.md#c02-08)：
 > 只讲「逐段连乘 + 中心差分验证」，不写 Jacobian、不写矩阵微分推导。
 > 实测在 ch08 那份 XOR 上，逻辑回归 val `0.675` → 手写两层网络 val `1.0000`；
 > 全参数数值梯度检验最大差 `8.3e-11`。
 
-### 第 15 章 激活函数与初始化（Activation and Initialization） · [待写]
+### 第 15 章 激活函数与初始化（Activation and Initialization） · [已完成]
 
-> `ch15_activation_init.md` ｜ `ch15_ex.py`
+> [教学](04_deep_learning/docs/ch15_activation_init.md) · [练习](04_deep_learning/exercises/ch15_ex.py)
 
-**本章子概念索引：** Sigmoid · ReLU · Leaky ReLU · GELU · 梯度消失（Vanishing Gradient）· 梯度爆炸（Exploding Gradient）· 权重初始化（Weight Initialization）· Xavier / He 初始化
+**本章子概念索引：** Sigmoid · tanh · ReLU · Leaky ReLU · GELU · 饱和（Saturation）· 梯度消失（Vanishing Gradient）· 梯度爆炸（Exploding Gradient）· 死 ReLU（Dying ReLU）· 权重初始化（Weight Initialization）· fan_in / fan_out · Xavier / He 初始化 · 初始化 ≠ 容量
 
-**节骨架：** 15.1 Sigmoid 与 ReLU ｜ 15.2 梯度消失与爆炸 ｜ 15.3 权重初始化
+**节骨架：** 15.1 激活函数族 ｜ 15.2 梯度消失与爆炸 ｜ 15.3 权重初始化 ｜ 15.4 实操清单（了结 ch14 的 `h=3` 悬念）
 
-> 取舍备注：15 与 16 内容接近，实际撰写时**允许合并成一章**，编号保留以便对照。
+> **结构备注**：**不与 ch16 合并**（原「允许合并」的备注作废）——本章梯度消失 / 初始化实测已够一章，
+> ch16 的优化器、归一化、残差是独立主题，编号保留以便对照。**全章继续只用 numpy**。
+> 8 层网络实测：ReLU + He 首/末层梯度范数 `2.558 → 1.068`（仅差 2.4 倍）；
+> naive `std=0.1` 衰减 596 倍、`std=1.0` 放大约 4 万倍。
+> **如实记录的负面结果**：ch14 `h=3` 的 XOR 换 5 种初始化，20 种子成功率仍只有 `0.40~0.60`；
+> 加到 `h=4` 就有 `0.90` —— 瓶颈是容量 / 局部最优而非梯度消失，系统解法留给 ch16。
 
 ### 第 16 章 训练深度网络（Training Deep Networks） · [待写]
 

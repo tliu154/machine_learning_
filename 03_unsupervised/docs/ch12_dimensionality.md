@@ -277,7 +277,9 @@ def train_linear_ae(Xc, k, lr=0.05, steps=5000, seed=0):
 **常见误区**：
 
 - **线性 AE 学不到 PCA 之外的东西**。想要更强的表示，必须加非线性激活（ReLU / tanh）
-  或堆深层 —— 那才需要[反向传播](../../04_deep_learning/docs/ch14_nn_basics.md#c14-04)（第 14 章）。
+  或堆深层 —— 那才需要[反向传播](../../04_deep_learning/docs/ch14_nn_basics.md#c14-04)（第 14 章）；
+  但加了激活还得配对的[初始化](../../04_deep_learning/docs/ch15_activation_init.md#c15-03)（第 15 章），
+  否则 8 层之后梯度会消失或爆炸。
 - **学习率过大会发散，和 [ch04](../../01_ml_framework/docs/ch04_training_steps.md) 一模一样**。
   在未经缩放的原始数据上（最大特征值约 `100`）用 `lr=0.05`，**第 8 步就 `inf`**；
   把数据统一除以 10 之后同样的 `lr` 才稳定。`lr=0.001` 跑 20000 步还剩 `0.0192`，

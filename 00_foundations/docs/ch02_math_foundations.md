@@ -385,7 +385,9 @@ $\sigma(1-\sigma)=0.235004$，与中心差分 `0.235004` 一致。
 
 **常见误区**：**是相乘，不是相加**，而且**一层都不能漏**。
 连乘多个小于 1 的数会迅速趋近 0 —— Sigmoid 导数最大也只有 0.25，
-深层网络里连乘几十次就是**梯度消失**（第 15 章），换成 ReLU 正是为了绕开它。
+深层网络里连乘几十次就是**梯度消失**
+（[ch15 15.2](../../04_deep_learning/docs/ch15_activation_init.md#c15-02) 实测：8 层 Sigmoid
+首层梯度只剩末层的 1/30），换成 ReLU 正是为了绕开它。
 
 **够用边界**：会「拆中间量 → 逐段求导 → 相乘」就够；多元链式法则的矩阵形式（Jacobian）本章不讲。
 
@@ -402,7 +404,7 @@ $\sigma(1-\sigma)=0.235004$，与中心差分 `0.235004` 一致。
 | 向量 / 矩阵 / 长度 | 数据表 `X`、参数 `theta`、正则项、样本距离 | 全仓库；[ch08](../../02_supervised/docs/ch08_classical_classifiers.md)、[ch05](../../01_ml_framework/docs/ch05_error_sources.md) |
 | 矩阵乘法 / 转置 | 一次前向 `X @ theta`、梯度汇总 `A.T @ err` | [ch04](../../01_ml_framework/docs/ch04_training_steps.md)、[ch07](../../02_supervised/docs/ch07_linear_models.md) |
 | 概率 / 条件概率 / 期望方差 | 噪声、朴素贝叶斯、标准化、偏差—方差、各类指标 | [ch08](../../02_supervised/docs/ch08_classical_classifiers.md)、[ch10](../../02_supervised/docs/ch10_feature_engineering.md)、[ch06](../../01_ml_framework/docs/ch06_evaluation_metrics.md) |
-| 导数 / 梯度 / 链式法则 | `w -= lr * dw`、反向传播、梯度消失 | [ch04](../../01_ml_framework/docs/ch04_training_steps.md)、[ch14](../../04_deep_learning/docs/ch14_nn_basics.md#c14-04) |
+| 导数 / 梯度 / 链式法则 | `w -= lr * dw`、反向传播、梯度消失 | [ch04](../../01_ml_framework/docs/ch04_training_steps.md)、[ch14](../../04_deep_learning/docs/ch14_nn_basics.md#c14-04)、[ch15](../../04_deep_learning/docs/ch15_activation_init.md#c15-02) |
 
 | C++ / 已有认知 | 本章写法 |
 |---|---|
